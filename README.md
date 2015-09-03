@@ -14,8 +14,8 @@
  - Open console and navigate to this folder
  - Run "vagrant up"
  - Run "vagrant provision"
- - If there is no rails app already created we should create one in serviceapi folder (ssh to vagrant, navigate to /var/www and run "rails new serviceapi [optional config]"
- - Ucomment unicorn gem in Gemfile and run "bundle install"
+ - If there is no rails app already created we should create one in serviceapi folder (ssh to vagrant with command "vagrant ssh", navigate to /var/www and run "rails new serviceapi [optional config]"
+ - Ucomment unicorn gem in Gemfile, navigate to /var/www/serviceapi and run "bundle install" 
  - Reload vagrant "vagrant reload" (exit from ssh first)
  
  
