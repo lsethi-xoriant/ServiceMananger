@@ -2,9 +2,11 @@
  [Learn more](http://go.microsoft.com/fwlink/p/?LinkId=524306) about Markdown.
  
  This project has staging environment created for Vagrant and VirtualBox.
+ 
  Dependency:
  - Vagrant 1.7.4
  - VirtualBox 5.0.3
+ 
  
  First start:
  - Create folder (important): D:\Mega\LoyaltyStudio\ServiceManager
