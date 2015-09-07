@@ -19,3 +19,5 @@
  - Reload vagrant "vagrant reload" (exit from ssh first)
  
  
+ Template:
+ http://webapplayers.com/homer_admin-v1.7/
