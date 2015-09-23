@@ -338,8 +338,14 @@ postgresql:
             version: '9.3'
         server:
             postgres_password: '123'
-    databases: {  }
-    users: {  }
+    databases:
+        postsqlnd_sdvgsmo4l43h:
+            dbname: serviceManager
+            owner: service
+    users:
+        postsqlnu_da0f185ix1gr:
+            username: service
+            password: manager
     grants: {  }
     adminer: '1'
 mongodb:
