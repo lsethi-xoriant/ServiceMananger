@@ -18,6 +18,13 @@
  - Ucomment unicorn gem in Gemfile, navigate to /var/www/serviceapi and run "bundle install" 
  - Reload vagrant "vagrant reload" (exit from ssh first)
  
+ PostgreSQL:
+ DB name: serviceManager
+ DB user: service
+ DB pass: manager
+ 
+ $ psql service -h 127.0.0.1 -d serviceManager
+ 
  
  Template:
  
