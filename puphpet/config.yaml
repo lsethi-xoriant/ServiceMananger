@@ -271,7 +271,7 @@ python:
     packages: {  }
     versions: {  }
 nodejs:
-    install: '1'
+    install: '0'
     npm_packages: {  }
 hhvm:
     install: '0'
