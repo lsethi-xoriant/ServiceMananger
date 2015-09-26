@@ -1,7 +1,7 @@
 class Api::AccessController < ApplicationController
 
   def create
-    @user = User.where(:email=>params[:access][:email]).first
+    @user = User.where(:username=>params[:access][:username]).first
     if @user && @user.authenticate(params[:access][:password])
       token = generate_new_token
       @user.update_attributes(:auth_token => token)
