@@ -15,7 +15,12 @@ class Api::GroupsController < ApplicationController
   end
 
   def update
-
+    @group = Group.find(params[:id])
+    if @group.update_attributes(group_params)
+      render json: @group,status: 200
+    else
+      render json: @group.errors,status: 404
+    end
   end
 
   def destroy
