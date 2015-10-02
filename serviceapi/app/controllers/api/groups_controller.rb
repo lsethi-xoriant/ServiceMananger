@@ -6,11 +6,11 @@ class Api::GroupsController < ApplicationController
   end
 
   def create
-    @user = User.create(group_params)
-    if @user.save
-      render json: @user,status: 201
+    @group = Group.create(group_params)
+    if @group.save
+      render json: @group,status: 201
     else
-      render json: @user.errors,status: :unprocessable_entity
+      render json: @group.errors,status: :unprocessable_entity
     end
   end
 
@@ -24,7 +24,12 @@ class Api::GroupsController < ApplicationController
   end
 
   def destroy
-
+    @group = Group.find(params[:id])
+    if @group.destroy
+      render nothing:true,status: 200
+    else
+      render json: @group.errors
+    end
   end
 
 
