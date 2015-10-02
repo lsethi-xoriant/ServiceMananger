@@ -43,6 +43,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (6.0.2)
+    cancancan (1.12.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     globalid (0.3.6)
@@ -126,6 +127,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
+  cancancan (~> 1.10)
   jbuilder (~> 2.0)
   pg
   rack-cors
