@@ -5,6 +5,11 @@ class Api::GroupsController < ApplicationController
     render json: @groups
   end
 
+  def show
+    @group = Group.find(params[:id])
+    render json: @group , status: :ok
+  end
+
   def create
     @group = Group.create(group_params)
     if @group.save

@@ -1,5 +1,6 @@
 Group.delete_all
 groups = [
+    ["admin",true,"Admin can do ...... and do...... "],
     ["seller",true,"Saller can do ...... and do...... "],
     ["servicer",true,"Servicer can do ...... and do...... "],
     ["employee",true,"Employe can do ...... and do...... "]
