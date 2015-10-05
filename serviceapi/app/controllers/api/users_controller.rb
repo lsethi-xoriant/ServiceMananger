@@ -3,7 +3,7 @@ class Api::UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: @users,:except=>[:password_digest]
+    render json: @users  ,:except=>[:password_digest,:group_id] , :include=>[:group=>{:only=>:name}]
 
   end
 
@@ -18,7 +18,7 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render json: @user
+    render json: @user  ,:except=>[:password_digest,:group_id] , :include=>[:group=>{:only=>:name}]
   end
 
   def update
