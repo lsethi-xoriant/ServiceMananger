@@ -19,9 +19,9 @@ end
 
 all_perrmisions = Permission.all
 groups.each do |name,active,description|
-    g = Group.create!({name:name,active:active,description:description})
-    p =  all_perrmisions.where(:name => name.downcase).first
-    g.permissions << p
+    group = Group.create!({name:name,active:active,description:description})
+    permission =  all_perrmisions.where(:name => name.downcase).first
+    group.permissions << permission
 end
 
 
