@@ -7,7 +7,7 @@ users = [
     ["osman","osman","osman@gmail.com",3]
 ]
 companies = [
-    ["Company_1","company_1@gmail.com","Amstredam","Nederland"],
+    ["Company_1","company_1@gmail.com","Amsterdam","Nederland"],
     ["Company_2","company_2@gmail.com","Mutnik","BiH"],
     ["Company_3","company_3@gmail.com","Buzim","BiH"]
 ]
