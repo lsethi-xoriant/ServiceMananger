@@ -1,5 +1,5 @@
 class Api::CompaniesController < ApplicationController
-
+  authorize_resource
   def index
     @companies = Company.all
     render json: @companies
@@ -21,7 +21,7 @@ class Api::CompaniesController < ApplicationController
 
   def update
     @company = Company.find(params[:id])
-    if @company.update_attributes(user_params)
+    if @company.update_attributes(company_params)
       render json: @company,status: 200
     else
       render json: @company.errors,status: 404

@@ -15,4 +15,13 @@ class User < ActiveRecord::Base
             :presence => true,
             :uniqueness => true
 
+
+  def permissions?(user_permissions)
+    permissions.pluck(:name).include?  user_permissions
+  end
+
+
+
+
+
 end
