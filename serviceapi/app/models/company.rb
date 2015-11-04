@@ -1,6 +1,6 @@
 class Company < ActiveRecord::Base
   has_and_belongs_to_many :users
-
+  has_many :stores
 
 
   VALID_EMAIL = /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
