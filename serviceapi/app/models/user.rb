@@ -16,8 +16,11 @@ class User < ActiveRecord::Base
             :uniqueness => true
 
 
+
+
+
   def permissions?(user_permissions)
-    permissions.pluck(:name).include?  user_permissions
+    permissions.pluck(:name).include?  user_permissions.to_s
   end
 
 

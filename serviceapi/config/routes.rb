@@ -4,9 +4,9 @@ Rails.application.routes.draw do
 
    resources :users,except:[:new,:edit]
    resources :access,only:[:create,:destroy]
-   resources :groups
+   resources :groups,except:[:new,:edit]
    resources :permissions ,only:[:index]
-   resources :companies
-
+   resources :companies,exept:[:new,:edit]
+   resources :stores,exept:[:new,:edit]
  end
 end
