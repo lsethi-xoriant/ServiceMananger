@@ -2,11 +2,13 @@ Group.delete_all
 Permission.delete_all
 permissionses = [
     ["admin",true,"Admin  permission"],
+    ["account owner",true,"Account owner  permission"],
     ["owner",true,"Owner  permission"],
     ["employee",true,"Employee  permission"]
    ]
 groups = [
     ["Admin",true,"Admin can do ...... and do...... "],
+    ["Account Owner",true,"Account owner can do ...... and do...... "],
     ["Owner",true,"Saller can do ...... and do...... "],
     ["Employee",true,"Employe can do ...... and do...... "]
 
