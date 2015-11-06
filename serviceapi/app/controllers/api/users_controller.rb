@@ -3,7 +3,7 @@ class Api::UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: @users  ,:except=>[:password_digest,:group_id] , :include=>[:group=>{:only=>:name}]
+    render json: @users  ,:except=>[:password_digest,:group_id] , :include=>[:groups=>{:only=>:name}]
   end
 
   def create

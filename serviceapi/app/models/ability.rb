@@ -11,7 +11,8 @@ class Ability
       elsif user.permissions?(:employee)
 
       else
-        can :read, :all
+          can :read, :all
+         # raise CanCan::AccessDenied
       end
 
   end
