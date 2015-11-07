@@ -12,7 +12,7 @@ companies =[
 
 permissionses = [
     ["admin",true,"Admin  permission"],
-    ["account owner",true,"Account owner  permission"],
+    ["account_owner",true,"Account owner  permission"],
     ["owner",true,"Owner  permission"],
     ["employee",true,"Employee  permission"]
 ]

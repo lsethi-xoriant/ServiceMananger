@@ -1,5 +1,5 @@
 class Api::CompaniesController < ApplicationController
-  authorize_resource
+  load_and_authorize_resource
   def index
     @companies = Company.all
     render json: @companies
