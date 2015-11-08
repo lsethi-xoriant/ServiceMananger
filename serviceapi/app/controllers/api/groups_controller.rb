@@ -1,5 +1,5 @@
 class Api::GroupsController < ApplicationController
-
+  load_and_authorize_resource
   def index
     @groups = Group.all
     render json: @groups
@@ -42,6 +42,6 @@ class Api::GroupsController < ApplicationController
   private
 
   def group_params
-    params.require(:group).permit(:name,:description,:active)
+    params.require(:group).permit(:name,:description)
   end
 end

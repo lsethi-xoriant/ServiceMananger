@@ -1,7 +1,7 @@
 class Api::StoresController < ApplicationController
-  # authorize_resource
+  load_and_authorize_resource
   def index
-    @stores = Store.all
+    @stores = Store.accessible_by(current_ability)
     render json: @stores
   end
 
@@ -43,7 +43,7 @@ class Api::StoresController < ApplicationController
   private
 
   def store_params
-    params.require(:store).permit(:email,:name,:city,:country)
+    params.require(:store).permit(:email,:name,:city,:country,:company_id)
   end
 
 

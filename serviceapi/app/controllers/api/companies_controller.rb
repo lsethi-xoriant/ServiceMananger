@@ -1,12 +1,13 @@
 class Api::CompaniesController < ApplicationController
   load_and_authorize_resource
   def index
-    @companies = Company.all
+    @companies = Company.accessible_by(current_ability)
     render json: @companies
   end
 
   def create
     @company = Company.create(company_params)
+    @company.users << current_user
     if @company.save
       render json: @company,status: 201
     else
