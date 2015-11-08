@@ -1,5 +1,6 @@
 class Api::StoresController < ApplicationController
   load_and_authorize_resource
+  before_filter :check_company_id ,:only=> :update
   def index
     @stores = Store.accessible_by(current_ability)
     render json: @stores
@@ -46,5 +47,13 @@ class Api::StoresController < ApplicationController
     params.require(:store).permit(:email,:name,:city,:country,:company_id)
   end
 
+
+  def check_company_id
+    if params[:store][:company_id].present?
+      if !current_user.companies.pluck(:id).include? params[:store][:company_id]
+        render json:{message: "You do not own a company with id #{params[:store][:company_id]}"},status: 403
+      end
+    end
+  end
 
 end
