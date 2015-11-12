@@ -1,8 +1,11 @@
 class Api::GroupsController < ApplicationController
   load_and_authorize_resource
   def index
-    @groups = Group.all
-    render json: @groups
+    groups = current_user.companies.includes(:groups).map do |company|
+      company.groups
+    end
+    @groups = groups.uniq
+    render json: @groups,status: :ok
   end
 
   def show
@@ -42,6 +45,6 @@ class Api::GroupsController < ApplicationController
   private
 
   def group_params
-    params.require(:group).permit(:name,:description)
+    params.require(:group).permit(:name,:description,:active,store_ids:[])
   end
 end

@@ -18,7 +18,7 @@ permissionses = [
 ]
 groups = [
     ["Admin",true,"Admin can do ...... and do...... "],
-    ["Account Owner",true,"Account owner can do ...... and do...... "],
+    ["Account_Owner",true,"Account owner can do ...... and do...... "],
     ["Owner",true,"Saller can do ...... and do...... "],
     ["Employee",true,"Employe can do ...... and do...... "]
 
@@ -51,7 +51,7 @@ groups.each do |name,active,description|
   Group.create!({name:name,active:active,description:description})
   end
 stores.each do |name,email,city,country|
-  Store.create!({name:name,email:email,city:city,country:country,company_id:rand(1..4)})
+  Store.create!({name:name,email:email,city:city,country:country,company_id:rand(1..2)})
 end
 
 

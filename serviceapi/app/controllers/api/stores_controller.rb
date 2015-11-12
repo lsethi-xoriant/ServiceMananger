@@ -1,6 +1,7 @@
 class Api::StoresController < ApplicationController
   load_and_authorize_resource
   before_filter :check_company_id ,:only=> :update
+
   def index
     @stores = Store.accessible_by(current_ability)
     render json: @stores
@@ -8,6 +9,9 @@ class Api::StoresController < ApplicationController
 
   def create
     @store = Store.create(store_params)
+    @store.users << current_user
+    default_group = Group.create(:name => "#{store.name} Employee")
+    @store.groups << default_group
     if @store.save
       render json: @store,status: 201
     else
