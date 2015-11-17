@@ -12,9 +12,7 @@ class Ability
         can :manage,Store,id: user.stores.pluck(:id)
         can :create,Store,company_id: user.companies.pluck(:id)
         can :manage,Group,stores:{id: user.stores.pluck(:id)}
-        can :create,Group do |group|
-          checking_ids(user.stores.pluck(:id),group.store_ids)
-        end
+        can :create,Group
         can :read,Permission
 
       elsif user.permissions?(:owner)
@@ -29,6 +27,12 @@ class Ability
   end
 
   def checking_ids(arrBase,arrParam)
+
+    unless arrParam.present?
+      raise StandardError "Group need to be assign to some Store",status: 422
+    end
+
+
     isExist=false
     arrParam.each do |v|
       isExist=false
