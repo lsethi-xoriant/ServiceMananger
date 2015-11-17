@@ -15,7 +15,7 @@ accepts_nested_attributes_for :permissions
   validates :description,
             :presence => true
   validates :store_ids,
-            :presence => true
+            :presence =>  {message: "Store is not present"}
 
   # validates :active,
   #           :presence => true
