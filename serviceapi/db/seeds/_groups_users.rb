@@ -6,6 +6,7 @@ users.each_with_index do |user,index|
   #   user.groups << groups.where(:name => 'Employee')
   # else
     user.groups << groups.where(:name => "Account_Owner")
+
   end
 
 end

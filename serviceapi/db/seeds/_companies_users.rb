@@ -1,6 +1,6 @@
 
 
-companies = Company.all
+companies = Company.all.limit(2)
 users = User.all.limit(2)
 #
 # companies.each_with_index do |company,index|

@@ -10,11 +10,11 @@ accepts_nested_attributes_for :stores
 
 
   validates :name,
-            :presence => true,
-            :uniqueness => true
+            :presence => true
   validates :description,
             :presence => true
-  validates_associated :stores
+  # validates :stores_ids,
+  #           :presence => true
 
   # validates :active,
   #           :presence => true

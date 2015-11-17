@@ -10,7 +10,7 @@ class Api::StoresController < ApplicationController
   def create
     @store = Store.create(store_params)
     @store.users << current_user
-    default_group = Group.create(:name => "#{store.name} Employee")
+    default_group = Group.new(:name => "#{@store.name} Employee",:description=> "Default Employee Group for #{@store.name}")
     @store.groups << default_group
     if @store.save
       render json: @store,status: 201

@@ -15,9 +15,7 @@ class Ability
         can :create,Group do |group|
           checking_ids(user.stores.pluck(:id),group.store_ids)
         end
-
-
-
+        can :read,Permission
 
       elsif user.permissions?(:owner)
         can :manage,Company,:user_id => user.id
@@ -40,8 +38,9 @@ class Ability
           break
         end
       end
+
       if !isExist
-        raise CanCan::AccessDenied.new("One of the Stores is not yours")
+        raise CanCan::AccessDenied.new("One of the Stores Ids is not yours")
       end
     end
     return isExist

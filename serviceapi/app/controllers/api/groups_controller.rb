@@ -1,5 +1,6 @@
 class Api::GroupsController < ApplicationController
   load_and_authorize_resource
+  before_action ->{checking_ids(params[:group][:store_ids])},only: [:update]
   def index
     groups = current_user.companies.includes(:groups).map do |company|
       company.groups
@@ -46,5 +47,24 @@ class Api::GroupsController < ApplicationController
 
   def group_params
     params.require(:group).permit(:name,:description,:active,store_ids:[])
+  end
+
+
+  def checking_ids(arrParam)
+    isExist=false
+    arrParam.each do |v|
+      isExist=false
+      current_user.stores.pluck(:id).each do |base|
+        if v == base
+          isExist = true
+          break
+        end
+      end
+
+      if !isExist
+        raise CanCan::AccessDenied.new("One of the Stores Ids is not yours")
+      end
+    end
+    return isExist
   end
 end
