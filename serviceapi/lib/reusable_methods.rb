@@ -12,7 +12,7 @@
           end
 
           if !isExist
-            raise CanCan::AccessDenied.new("One of the Stores is not yours")
+            raise CanCan::AccessDenied.new("One of the Id's is not yours")
           end
         end
         return isExist

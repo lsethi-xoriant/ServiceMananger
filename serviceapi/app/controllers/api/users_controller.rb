@@ -1,9 +1,12 @@
 class Api::UsersController < ApplicationController
-  #respond_to :json
+  include ReusableMethods
+
+  before_filter :check_params,only:[:create]
+  load_and_authorize_resource
 
   def index
-    @users = User.all
-    render json: @users  ,:except=>[:password_digest,:group_id] , :include=>[:groups=>{:only=>:name}]
+    @users = User.accessible_by(current_ability)
+    render json: @users,:except=>[:password_digest],:include=>[:groups=>{:only=>:name}]
   end
 
   def create
@@ -17,7 +20,7 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render json: @user  ,:except=>[:password_digest,:group_id] , :include=>[:group=>{:only=>:name}]
+    render json: @user,:except=>[:password_digest],:include=>[:groups=>{:only=>[:name,:id]}]
   end
 
   def update
@@ -44,7 +47,13 @@ class Api::UsersController < ApplicationController
 private
 
 def user_params
-  params.require(:user).permit(:email,:username,:password,:password_confirmation)
+  params.require(:user).permit(:email,:username,:password,:password_confirmation,company_ids:[])
+end
+
+def check_params
+  if params[:user][:company_ids].present?
+    checking_ids(current_user.companies.pluck(:id),params[:user][:company_ids])
+  end
 end
 
 end

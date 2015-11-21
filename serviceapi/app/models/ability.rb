@@ -14,6 +14,11 @@ class Ability
         can :manage,Group,stores:{id: user.stores.pluck(:id)}
         can :create,Group
         can :read,Permission
+        can :manage,User,companies:{id:user.companies.pluck(:id)}
+        can :create,User
+
+
+
 
       elsif user.permissions?(:owner)
         can :manage,Company,:user_id => user.id

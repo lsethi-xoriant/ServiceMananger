@@ -6,10 +6,8 @@ class Api::GroupsController < ApplicationController
   before_action :check_param,only: [:update,:create]
 
   def index
-    groups = current_user.companies.includes(:groups).map do |company|
-      company.groups
-    end
-    @groups = groups.uniq
+    @groups = Group.accessible_by(current_ability)
+    # @groups = groups.uniq
     render json: @groups,status: :ok
   end
 
