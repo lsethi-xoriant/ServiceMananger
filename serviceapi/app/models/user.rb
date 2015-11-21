@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :permissions,:through => :groups
 
   accepts_nested_attributes_for :companies
+  accepts_nested_attributes_for :groups
 
   VALID_EMAIL = /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
   validates :email,
@@ -20,6 +21,7 @@ class User < ActiveRecord::Base
             # :uniqueness => true
   validates :company_ids,
             :presence => {message: "Company is not present"}
+
 
 
 

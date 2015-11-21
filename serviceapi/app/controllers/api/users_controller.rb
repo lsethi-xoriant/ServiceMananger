@@ -47,13 +47,12 @@ class Api::UsersController < ApplicationController
 private
 
 def user_params
-  params.require(:user).permit(:email,:username,:password,:password_confirmation,company_ids:[])
+  params.require(:user).permit(:email,:username,:password,:password_confirmation,company_ids:[],group_ids:[])
 end
 
 def check_params
-  if params[:user][:company_ids].present?
-    checking_ids(current_user.companies.pluck(:id),params[:user][:company_ids])
-  end
+  checking_ids(current_user.companies.pluck(:id),params[:user][:company_ids]) if params[:user][:company_ids].present?
+  check_group_ids(params[:user][:group_ids]) if params[:user][:group_ids].present?
 end
 
 end

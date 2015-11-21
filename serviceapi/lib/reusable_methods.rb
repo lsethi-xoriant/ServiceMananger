@@ -25,4 +25,11 @@
       end
     end
 
+    def check_group_ids(params)
+      ids = current_user.companies.includes(:stores).map { |company| company.groups.pluck(:id)}.flatten.uniq
+      checking_ids(ids,params)
+    end
+
+    
+
   end
