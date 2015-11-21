@@ -17,9 +17,6 @@ class Ability
         can :manage,User,companies:{id:user.companies.pluck(:id)}
         can :create,User
 
-
-
-
       elsif user.permissions?(:owner)
         can :manage,Company,:user_id => user.id
       elsif user.permissions?(:employee)

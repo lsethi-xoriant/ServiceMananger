@@ -30,6 +30,10 @@
       checking_ids(ids,params)
     end
 
-    
+    def check_store_ids(params)
+      stores_ids = current_user.companies.includes(:stores).map { |company| company.stores.pluck(:id)}.flatten
+      checking_ids(stores_ids,params)
+    end
+
 
   end

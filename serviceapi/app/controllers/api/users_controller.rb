@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
   include ReusableMethods
 
-  before_filter :check_params,only:[:create]
+  before_filter :check_params,only:[:create,:update]
   load_and_authorize_resource
 
   def index
@@ -46,13 +46,15 @@ class Api::UsersController < ApplicationController
 
 private
 
-def user_params
-  params.require(:user).permit(:email,:username,:password,:password_confirmation,company_ids:[],group_ids:[])
-end
+  def user_params
+    params.require(:user).permit(:email,:username,:password,:password_confirmation,company_ids:[],group_ids:[])
+  end
 
-def check_params
-  checking_ids(current_user.companies.pluck(:id),params[:user][:company_ids]) if params[:user][:company_ids].present?
-  check_group_ids(params[:user][:group_ids]) if params[:user][:group_ids].present?
-end
+  def check_params
+    checking_ids(current_user.companies.pluck(:id),params[:user][:company_ids]) if params[:user][:company_ids].present?
+    check_group_ids(params[:user][:group_ids]) if params[:user][:group_ids].present?
+    check_store_ids(params[:user][:store_ids]) if params[:user][:store_ids].present?
+  end
+
 
 end

@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :companies
   accepts_nested_attributes_for :groups
+  accepts_nested_attributes_for :stores
 
   VALID_EMAIL = /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
   validates :email,
