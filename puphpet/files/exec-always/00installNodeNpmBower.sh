@@ -5,7 +5,12 @@ echo -
 echo -
 
 apt-get update
-apt-get install -y node
+#apt-get install -y nodejs
+sudo apt-get install -y nodejs
+sudo apt-get install -y npm
+sudo npm install -g bower
+ln -s /usr/bin/nodejs /usr/bin/node
+sudo apt-get install nodejs-legacy
 
 echo -
 echo -
