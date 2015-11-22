@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  resources :account_packages
  namespace :api,defaults:{format: 'json'} do
 
    resources :users,except:[:new,:edit]
@@ -9,5 +7,6 @@ Rails.application.routes.draw do
    resources :permissions ,only:[:index]
    resources :companies,exept:[:new,:edit]
    resources :stores,exept:[:new,:edit]
+   resources :account_packages,only:[:index]
  end
 end
