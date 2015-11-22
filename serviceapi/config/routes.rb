@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :account_packages
  namespace :api,defaults:{format: 'json'} do
 
    resources :users,except:[:new,:edit]

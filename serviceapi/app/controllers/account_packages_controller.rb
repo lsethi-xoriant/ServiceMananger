@@ -1,0 +1,2 @@
+class AccountPackagesController < ApplicationController
+end

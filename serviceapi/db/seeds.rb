@@ -3,6 +3,12 @@ Permission.delete_all
 User.delete_all
 Company.delete_all
 
+account_package = [
+    ["Basic","Basic account packege"],
+    ["Medium","Medium account packege"],
+    ["Premium","Premium account packege"],
+]
+
 companies =[
     ["Company_1","company_1@gmail.com","Amsterdam","Nederland"],
     ["Company_2","company_2@gmail.com","Mutnik","BiH"]
@@ -52,7 +58,9 @@ end
 # stores.each do |name,email,city,country|
 #   Store.create!({name:name,email:email,city:city,country:country,company_id:rand(1..2)})
 # end
-
+account_package.each do |name,description|
+    AccountPackage.create!({name:name,description:description})
+end
 
 
 
