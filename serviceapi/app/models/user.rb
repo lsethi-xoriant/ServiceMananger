@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :companies
   has_and_belongs_to_many :stores
   has_many :permissions,:through => :groups
+  belongs_to :account_package
 
   accepts_nested_attributes_for :companies
   accepts_nested_attributes_for :groups
