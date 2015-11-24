@@ -115,6 +115,23 @@ nginx:
             ssl_ciphers: ''
             rewrite_to_https: '1'
             spdy: '1'
+        serviceadmin:
+            server_name: serviceadmin.dev
+            www_root: /var/www/serviceadmin
+            listen_port: '80'
+            index_files:
+                - index.html
+                - index.htm
+                - index.php
+            client_max_body_size: 1m
+            ssl: '0'
+            ssl_cert: ''
+            ssl_key: ''
+            ssl_port: '443'
+            ssl_protocols: ''
+            ssl_ciphers: ''
+            rewrite_to_https: '1'
+            spdy: '1'
         serviceapi:
             server_name: serviceapi.dev
             www_root: /var/www/serviceapi
