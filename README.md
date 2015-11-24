@@ -24,9 +24,6 @@
  - Ucomment unicorn gem in Gemfile, navigate to /var/www/serviceapi and run "bundle install" 
  - Reload vagrant "vagrant reload" (exit from ssh first)
  
- - SSH to vagrant and install nom with command: sudo apt-get install npm
- - Install bower with command: sudo npm install bower -g
- 
  PostgreSQL:
  DB name: serviceManager
  DB user: service
