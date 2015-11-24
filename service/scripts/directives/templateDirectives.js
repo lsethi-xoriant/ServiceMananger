@@ -4,8 +4,7 @@
  *
  */
 
-angular
-    .module('SerMan')
+serManDirectives
     .directive('pageTitle', pageTitle)
     .directive('sideNavigation', sideNavigation)
     .directive('minimalizaMenu', minimalizaMenu)
@@ -25,14 +24,14 @@ function pageTitle($rootScope, $timeout) {
         link: function(scope, element) {
             var listener = function(event, toState, toParams, fromState, fromParams) {
                 // Default title
-                var title = 'HOMER | AngularJS Responsive WebApp';
+                var title = "SerMan | Manage your service on the right way!";
                 // Create your own title pattern
-                if (toState.data && toState.data.pageTitle) title = 'SerMan | ' + toState.data.pageTitle;
+                if (toState.data && toState.data.pageTitle) title = "SerMan | " + toState.data.pageTitle;
                 $timeout(function() {
                     element.text(title);
                 });
             };
-            $rootScope.$on('$stateChangeStart', listener);
+            $rootScope.$on("$routeChangeStart", listener);
         }
     }
 };
@@ -118,9 +117,9 @@ function icheck($timeout) {
                 var value;
                 value = $attrs['value'];
 
-                $scope.$watch($attrs['ngModel'], function(newValue){
+                $scope.$watch($attrs['ngModel'], function(newValue) {
                     $(element).iCheck('update');
-                })
+                });
 
                 return $(element).iCheck({
                     checkboxClass: 'icheckbox_square-green',
@@ -247,7 +246,7 @@ function smallHeader() {
     }
 }
 
-function animatePanel($timeout,$state) {
+function animatePanel($timeout) {
     return {
         restrict: 'A',
         link: function (scope, element, attrs) {
@@ -258,7 +257,7 @@ function animatePanel($timeout,$state) {
             var start = Math.abs(delay) + startAnimation;
 
             // Store current state where directive was start
-            var currentState = $state.current.name;
+            //var currentState = $state.current.name;
 
             // Set default values for attrs
             if(!attrs.effect) { attrs.effect = 'zoomIn'};
@@ -292,10 +291,10 @@ function animatePanel($timeout,$state) {
                 });
 
                 // Clear animation after finish
-                $timeout(function(){
+                $timeout(function() {
                     $('.stagger').css('animation', '');
                     $('.stagger').removeClass(attrs.effect).removeClass('animated-panel').removeClass('stagger');
-                }, animateTime)
+                }, animateTime);
 
             });
 

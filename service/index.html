@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="SerMan">
+<html ng-app="serMan">
 <head>
 
     <meta charset="utf-8">
@@ -29,19 +29,24 @@
     <p class="alert alert-danger">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Page view wrapper -->
-    <div class="uiview" ui-view></div>
+    <div class="uiview" ng-view></div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="bower_components/iCheck/icheck.min.js"></script>
 
     <script src="scripts/template.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/config.js"></script>
-    <script src="scripts/directives/directives.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+
+    <script src="scripts/directives/templateDirectives.js"></script>
+
+    <script src="scripts/controllers/dashboardController.js"></script>
+    <script src="scripts/controllers/loginController.js"></script>
 </body>
 </html>

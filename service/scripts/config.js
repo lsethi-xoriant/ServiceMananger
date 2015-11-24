@@ -1,31 +1,15 @@
-/**
- * HOMER - Responsive Admin Theme
- * version 1.8
- *
- */
+var appConfig = {};
 
-function configState($stateProvider, $urlRouterProvider, $compileProvider) {
-
-    // Optimize load start with remove binding information inside the DOM element
-    $compileProvider.debugInfoEnabled(true);
-
-    // Set default state
-    $urlRouterProvider.otherwise("/dashboard");
-    $stateProvider
-
-        // Dashboard - Main page
-        .state('dashboard', {
-            url: "/dashboard",
-            templateUrl: "views/dashboard.html",
-            data: {
-                pageTitle: 'Dashboard',
-            }
-        })
+if (document.location.hostname === "localhost") {
+    appConfig.baseUrl = "http://localhost:23593/";
+    appConfig.baseUrlApi = appConfig.baseUrl + "api/";
+} else {
+    appConfig.baseUrl = "http://serman.com/";
+    appConfig.baseUrlApi = appConfig.baseUrl + "api/";
 }
 
-angular
-    .module('SerMan')
-    .config(configState)
-    .run(function($rootScope, $state) {
-        $rootScope.$state = $state;
-    });
+appConfig.baseUrlLogin = appConfig.baseUrl + "Token";
+appConfig.imagesRealEstates = appConfig.baseUrl + "content/images/realestates/";
+appConfig.imagesTourism = appConfig.baseUrl + "content/images/tourism/";
+appConfig.noImage = appConfig.baseUrl + "content/images/realestates/NoImage_a.jpg";
+appConfig.defaultAdminPage = "/adminrealestates";
