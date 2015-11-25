@@ -1,1 +1,6 @@
 /.vagrant
+/service/.vs
+/service/bower_components
+/serviceadmin/.vs
+/serviceadmin/bower_components
+*.sln
