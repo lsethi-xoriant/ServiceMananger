@@ -8,5 +8,7 @@ Rails.application.routes.draw do
    resources :companies,exept:[:new,:edit]
    resources :stores,exept:[:new,:edit]
    resources :account_packages,only:[:index]
+   resources :registration,only:[:create]
+
  end
 end

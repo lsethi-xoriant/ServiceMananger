@@ -24,26 +24,22 @@ permissionses = [
 ]
 groups = [
     ["Admin",true,"Admin can do ...... and do...... "],
-    ["Account_Owner",true,"Account owner can do ...... and do...... "]
-    # ["Owner",true,"Saller can do ...... and do...... "],
-    # ["Employee",true,"Employe can do ...... and do...... "]
+    ["Account_Owner",true,"Account owner can do ...... and do...... "],
+    ["Company_1 store Employee ",true,"Default Employee Group for Company_1 store"],
+    ["Company_2 store Employee ",true,"Default Employee Group for Company_2 store"]
 ]
 stores = [
-    # ["store1","store1@gmail.com","London","UK"],
-    # ["store2","store2@gmail.com","Mutnik","Bosnia"],
-    # ["store3","store3@gmail.com","Buzim","Bosnia"],
-    # ["store4","store4@gmail.com","Bec","Austria"]
+    ["company_1 store","store1@gmail.com","London","UK",1],
+    [" company_2store","store2@gmail.com","Mutnik","Bosnia",2]
 ]
 
 users = [
-    ["user1","user1","user1@gmail.com"],
-    ["user2","user2","user2@gmail.com"]
+    ["user1","user1","user1@gmail.com",1,1],
+    ["user2","user2","user2@gmail.com",2,2]
     # ["osman","osman","osman@gmail.com"],
     # ["ado pado","ado","ado_pado@gmail.com"]
 ]
-users.each do |username,pass,email|
-  User.create!({username:username,password:pass,email:email})
-end
+
 
 companies.each do |name,email,city,country|
   Company.create!({name:name,email:email,city:city,country:country})
@@ -55,13 +51,15 @@ end
 groups.each do |name,active,description|
   Group.create!({name:name,active:active,description:description})
 end
-# stores.each do |name,email,city,country|
-#   Store.create!({name:name,email:email,city:city,country:country,company_id:rand(1..2)})
-# end
+stores.each do |name,email,city,country,company_id|
+  Store.create!({name:name,email:email,city:city,country:country,company_id:company_id})
+end
 account_package.each do |name,description|
     AccountPackage.create!({name:name,description:description})
 end
-
+users.each do |username,pass,email,account_package_id,company_id|
+    User.create!({username:username,password:pass,email:email,account_package_id:account_package_id,company_ids:[company_id]})
+end
 
 
 

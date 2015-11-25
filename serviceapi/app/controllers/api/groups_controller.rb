@@ -7,7 +7,7 @@ class Api::GroupsController < ApplicationController
 
   def index
     @groups = Group.accessible_by(current_ability)
-    # @groups = groups.uniq
+    @groups = @groups.uniq
     render json: @groups,status: :ok
   end
 
@@ -17,6 +17,10 @@ class Api::GroupsController < ApplicationController
   end
 
   def create
+    unless params[:group][:store_ids].present?
+      render json:{message: "Store is not present"} ,status: :unprocessable_entity
+      return
+    end
     @group = Group.create(group_params)
     if @group.save
       render json: @group,status: 201
@@ -52,12 +56,7 @@ class Api::GroupsController < ApplicationController
   end
 
   def check_param
-    if params[:group][:store_ids].present?
-      checking_ids(current_user.stores.pluck(:id),params[:group][:store_ids])
-    end
-    if params[:group][:permission_ids].present?
-      check_permissions(params[:group][:permission_ids])
-    end
-
+    checking_ids(current_user.stores.pluck(:id),params[:group][:store_ids])
+    check_permissions(params[:group][:permission_ids])  if params[:group][:permission_ids].present?
   end
 end

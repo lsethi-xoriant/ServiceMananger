@@ -1,9 +1,3 @@
-#
-# groups = Group.all
-# stores = Store.all
-#
-# groups.each_with_index do |group,index|
-#  if group.name == 'Employee'
-#   group.stores << stores
-#  end
-# end
+stores = Store.all
+stores[0].groups<< Group.find(3)
+stores[1].groups<< Group.find(4)

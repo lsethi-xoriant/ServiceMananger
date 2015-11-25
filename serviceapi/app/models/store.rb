@@ -5,6 +5,7 @@ class Store < ActiveRecord::Base
 
   accepts_nested_attributes_for :company
 
+
   VALID_EMAIL = /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
   validates :email,
             :presence => true,

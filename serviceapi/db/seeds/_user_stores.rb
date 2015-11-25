@@ -1,5 +1,7 @@
-# users = User.all
-# stores = Store.all
+ users = User.all
+ stores = Store.all
+ users[0].stores << stores[0]
+ users[1].stores << stores[1]
 #
 # users.each_with_index do |user,index|
 #   # if user.groups.pluck(:name).include? 'Employee'

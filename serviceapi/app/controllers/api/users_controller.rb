@@ -1,8 +1,8 @@
 class Api::UsersController < ApplicationController
   include ReusableMethods
-
-  before_filter :check_params,only:[:create,:update]
   load_and_authorize_resource
+  before_filter :check_params,only:[:create,:update]
+
 
   def index
     @users = User.accessible_by(current_ability)
@@ -32,7 +32,6 @@ class Api::UsersController < ApplicationController
     end
   end
 
-
   def destroy
     @user = User.find(params[:id])
     if @user.destroy
@@ -43,12 +42,13 @@ class Api::UsersController < ApplicationController
   end
 
 
-
 private
 
   def user_params
     params.require(:user).permit(:email,:username,:password,:password_confirmation,company_ids:[],group_ids:[])
   end
+
+
 
   def check_params
     checking_ids(current_user.companies.pluck(:id),params[:user][:company_ids]) if params[:user][:company_ids].present?

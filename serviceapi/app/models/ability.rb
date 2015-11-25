@@ -22,7 +22,7 @@ class Ability
       elsif user.permissions?(:employee)
 
       else
-          can :manage, Access
+          # can :manage, Access
          # raise CanCan::AccessDenied
       end
 
@@ -33,7 +33,6 @@ class Ability
     unless arrParam.present?
       raise StandardError "Group need to be assign to some Store",status: 422
     end
-
 
     isExist=false
     arrParam.each do |v|
