@@ -4,7 +4,7 @@
  *
  */
 
-serManDirectives
+managernoDirectives
     .directive('pageTitle', pageTitle)
     .directive('sideNavigation', sideNavigation)
     .directive('minimalizaMenu', minimalizaMenu)
@@ -24,9 +24,9 @@ function pageTitle($rootScope, $timeout) {
         link: function(scope, element) {
             var listener = function(event, toState, toParams, fromState, fromParams) {
                 // Default title
-                var title = "SerMan | Manage your service on the right way!";
+                var title = "Managerno | Manage your service on the right way!";
                 // Create your own title pattern
-                if (toState.data && toState.data.pageTitle) title = "SerMan | " + toState.data.pageTitle;
+                if (toState.data && toState.data.pageTitle) title = "Managerno | " + toState.data.pageTitle;
                 $timeout(function() {
                     element.text(title);
                 });

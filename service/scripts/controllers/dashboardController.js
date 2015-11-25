@@ -5,5 +5,5 @@
 
     }
 
-    serManControllers.controller("dashboardController", dashboardController);
+    managernoControllers.controller("dashboardController", dashboardController);
 })();
