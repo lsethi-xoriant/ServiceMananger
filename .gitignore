@@ -4,3 +4,4 @@
 /serviceadmin/.vs
 /serviceadmin/bower_components
 *.sln
+/serviceapi/db/schema.rb
