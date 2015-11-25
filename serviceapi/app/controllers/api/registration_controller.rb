@@ -7,6 +7,7 @@ class Api::RegistrationController < ApplicationController
       @user = User.new(registration_account_params)
       @user.validation_trigger = false
       @user.auth_token= generate_new_token
+      @user.groups << Group.where(:name => "Account_Owner").first
       if @user.save
         render json: @user,status: 200
       else
