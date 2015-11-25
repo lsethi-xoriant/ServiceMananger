@@ -5,6 +5,8 @@ class Store < ActiveRecord::Base
 
   accepts_nested_attributes_for :company
 
+  after_save :create_default_user_group
+
 
   VALID_EMAIL = /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
   validates :email,
@@ -23,5 +25,10 @@ class Store < ActiveRecord::Base
 
   validates :company_id,
             :presence => true
+
+
+  def create_default_user_group
+    self.groups.create(:name => "#{self.name} Employee",:description=> "Default Employee Group for #{self.name}")
+  end
 
 end

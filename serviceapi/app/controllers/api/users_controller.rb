@@ -10,7 +10,8 @@ class Api::UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    @user = User.new(user_params)
+    @user.validation_trigger = true
     if @user.save
       render json: @user,status: 201
     else
@@ -54,6 +55,12 @@ private
     checking_ids(current_user.companies.pluck(:id),params[:user][:company_ids]) if params[:user][:company_ids].present?
     check_group_ids(params[:user][:group_ids]) if params[:user][:group_ids].present?
     check_store_ids(params[:user][:store_ids]) if params[:user][:store_ids].present?
+  end
+
+  def checking_existence_company_id?
+    unless params[:user][:company_id]
+
+    end
   end
 
 

@@ -1,11 +1,15 @@
 class Group < ActiveRecord::Base
+  @@validation_trigger = false
 
-has_and_belongs_to_many :permissions
-has_and_belongs_to_many :users
-has_and_belongs_to_many :stores
+  attr_accessor :validation_trigger
 
-accepts_nested_attributes_for :stores
-accepts_nested_attributes_for :permissions
+
+  has_and_belongs_to_many :permissions
+  has_and_belongs_to_many :users
+  has_and_belongs_to_many :stores
+
+  accepts_nested_attributes_for :stores
+  accepts_nested_attributes_for :permissions
 
 
 
@@ -14,12 +18,16 @@ accepts_nested_attributes_for :permissions
             :presence => true
   validates :description,
             :presence => true
-  # validates :store_ids,
-  #           :presence =>  {message: "Store is not present"} if:
-
+  validates :store_ids,
+            :presence =>  {message: "Store is not present"},:if => :should_validate
 
   # validates :active,
   #           :presence => true
+
+
+  def should_validate
+    validation_trigger
+  end
 
 
 end

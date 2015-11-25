@@ -17,11 +17,8 @@ class Api::GroupsController < ApplicationController
   end
 
   def create
-    unless params[:group][:store_ids].present?
-      render json:{message: "Store is not present"} ,status: :unprocessable_entity
-      return
-    end
-    @group = Group.create(group_params)
+    @group = Group.new(group_params)
+    @group.validation_trigger = true
     if @group.save
       render json: @group,status: 201
     else
@@ -56,7 +53,7 @@ class Api::GroupsController < ApplicationController
   end
 
   def check_param
-    checking_ids(current_user.stores.pluck(:id),params[:group][:store_ids])
+    checking_ids(current_user.stores.pluck(:id),params[:group][:store_ids]) if params[:group][:store_ids]
     check_permissions(params[:group][:permission_ids])  if params[:group][:permission_ids].present?
   end
 end

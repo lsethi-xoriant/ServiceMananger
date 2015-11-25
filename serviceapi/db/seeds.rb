@@ -24,9 +24,9 @@ permissionses = [
 ]
 groups = [
     ["Admin",true,"Admin can do ...... and do...... "],
-    ["Account_Owner",true,"Account owner can do ...... and do...... "],
-    ["Company_1 store Employee ",true,"Default Employee Group for Company_1 store"],
-    ["Company_2 store Employee ",true,"Default Employee Group for Company_2 store"]
+    ["Account_Owner",true,"Account owner can do ...... and do...... "]
+    # ["Company_1 store Employee ",true,"Default Employee Group for Company_1 store"],
+    # ["Company_2 store Employee ",true,"Default Employee Group for Company_2 store"]
 ]
 stores = [
     ["company_1 store","store1@gmail.com","London","UK",1],
