@@ -1,20 +1,20 @@
 "use strict";
 
-var serMan = angular.module("serMan", [
+var Managerno = angular.module("Managerno", [
     "ngRoute",
     "ui.bootstrap",
-    "serManControllers",
-    "serManServices",
-    "serManDirectives",
-    "serManFilters"
+    "managernoControllers",
+    "managernoServices",
+    "managernoDirectives",
+    "managernoFilters"
 ]);
 
-var serManControllers = angular.module("serManControllers", []);
-var serManServices = angular.module("serManServices", []);
-var serManDirectives = angular.module("serManDirectives", []);
-var serManFilters = angular.module("serManFilters", []);
+var managernoControllers = angular.module("managernoControllers", []);
+var managernoServices = angular.module("managernoServices", []);
+var managernoDirectives = angular.module("managernoDirectives", []);
+var managernoFilters = angular.module("managernoFilters", []);
 
-serMan.config(function ($routeProvider, $httpProvider) {
+Managerno.config(function ($routeProvider, $httpProvider) {
     $routeProvider
         .when("/dashboard", {
             templateUrl: "views/dashboard.html",
@@ -36,7 +36,7 @@ serMan.config(function ($routeProvider, $httpProvider) {
     $httpProvider.interceptors.push("httpInterceptor");
 });
 
-serMan.factory("httpInterceptor", ["$q", "$location", function ($q, $location) {
+Managerno.factory("httpInterceptor", ["$q", "$location", function ($q, $location) {
     return {
         'request': function (config) {
             if (config.url !== appConfig.baseUrlLogin) {

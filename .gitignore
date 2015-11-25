@@ -1,2 +1,6 @@
-.vagrant/
-service/bower_components/
+/.vagrant
+/service/.vs
+/service/bower_components
+/serviceadmin/.vs
+/serviceadmin/bower_components
+*.sln

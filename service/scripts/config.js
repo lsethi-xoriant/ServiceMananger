@@ -4,7 +4,7 @@ if (document.location.hostname === "localhost") {
     appConfig.baseUrl = "http://localhost:23593/";
     appConfig.baseUrlApi = appConfig.baseUrl + "api/";
 } else {
-    appConfig.baseUrl = "http://serman.com/";
+    appConfig.baseUrl = "http://managerno.com/";
     appConfig.baseUrlApi = appConfig.baseUrl + "api/";
 }
 

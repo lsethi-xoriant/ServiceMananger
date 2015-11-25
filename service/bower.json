@@ -1,10 +1,10 @@
 {
-  "name": "SerMan",
+  "name": "Managerno",
   "version": "1.0.0",
   "authors": [
     "Loyalty Studio"
   ],
-  "description": "SerMan - Manage your service on the right way!",
+  "description": "Managerno - Manage your service on the right way!",
   "main": "index.html",
   "private": true,
   "ignore": [

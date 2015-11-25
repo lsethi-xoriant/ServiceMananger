@@ -5,5 +5,5 @@
 
     }
 
-    serManControllers.controller("loginController", loginController);
+    managernoControllers.controller("loginController", loginController);
 })();
