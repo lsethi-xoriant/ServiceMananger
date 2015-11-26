@@ -1,14 +1,4 @@
 module Abilities
-  def self.ability_for(user)
-    if user.permissions?(:admin)
-     Admin.new(user)
-    elseif user.permissions?(:account_owner)
-    AccountOwner.new(user)
-    else
-    GuestAbility.new
-    end
-  end
-
   class AccountOwner
     include CanCan::Ability
 
