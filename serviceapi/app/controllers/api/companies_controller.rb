@@ -1,15 +1,16 @@
 class Api::CompaniesController < ApplicationController
+  respond_to :json
   load_and_authorize_resource
   def index
     @companies = Company.accessible_by(current_ability)
-    render json: @companies
+    respond_with @companies,status: 200
   end
 
   def create
     @company = Company.create(company_params)
     @company.users << current_user
     if @company.save
-      render json: @company,status: 201
+      respond_with @company,status: 201
     else
       render json: @company.errors,status: :unprocessable_entity
     end
@@ -17,15 +18,15 @@ class Api::CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
-    render json: @company
+    respond_with @company,status: 200
   end
 
   def update
     @company = Company.find(params[:id])
     if @company.update_attributes(company_params)
-      render json: @company,status: 200
+      respond_with @company,status: 200
     else
-      render json: @company.errors,status: 404
+      render json: @company.errors,status: :unprocessable_entity
     end
   end
 
