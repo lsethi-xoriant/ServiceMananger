@@ -1,4 +1,5 @@
 class Api::AccessController < ApplicationController
+  respond_to :json
   skip_authorization_check :only => [:create]
   skip_before_action :restrict_access ,only: :create
   def create
@@ -6,7 +7,8 @@ class Api::AccessController < ApplicationController
     if @user && @user.authenticate(params[:access][:password])
       token = generate_new_token
       @user.update_attributes(:auth_token => token)
-      render json: @user,:except=>[:password_digest],status: 200
+      # render json: @user,:except=>[:password_digest],status: 200
+      respond_with @user,status: 200
     else
       render json:{message:"Bad Credentials"},status:401
     end
