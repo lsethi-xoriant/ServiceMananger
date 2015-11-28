@@ -16,15 +16,20 @@
  - Open console and navigate to this folder
  - Run "vagrant up"
  - Run "vagrant provision"
- 
  - SSH to vagrant and run command: sudo apt-get install libpq-dev build-essential
  - Go to /etc/postgresql/9.3/main and open pg_hba.conf with command: sudo nano pg_hba.conf
- - Change line ( local   all     all             ident ) to ( local   all     all             md5 ) 
- - Restart postgresql with command: sudo service postgresql restart
+ - Change line ( local   all     all             ident ) to ( local   all     all             md5 )
+ - Reload vagrant: vagrant reload (exit from ssh first)
  
- - If there is no rails app already created we should create one in serviceapi folder (ssh to vagrant with command "vagrant ssh", navigate to /var/www and run "rails new serviceapi [optional config]"
- - Ucomment unicorn gem in Gemfile, navigate to /var/www/serviceapi and run "bundle install" 
- - Reload vagrant "vagrant reload" (exit from ssh first)
+ Installing Rails app
+ - If there is no rails app already created we should create one in serviceapi folder 
+ - SSH to vagrant with command: vagrant ssh
+ - Navigate to /var/www
+ - Run command: rails new serviceapi [optional config]
+ - Ucomment unicorn gem in Gemfile
+ - Navigate to /var/www/serviceapi
+ - Run command: bundle install
+  
  
  PostgreSQL:
  DB name: serviceManager
