@@ -21,6 +21,7 @@
  - Change line ( local   all     all             ident ) to ( local   all     all             md5 )
  - Reload vagrant: vagrant reload (exit from ssh first)
  
+ 
  Installing Rails app
  - If there is no rails app already created we should create one in serviceapi folder 
  - SSH to vagrant with command: vagrant ssh
@@ -31,9 +32,11 @@
  - Run command: bundle install
  - Reload vagrant: vagrant reload (exit from ssh first)
  
+ 
  Initial Rails Commands
  - rake db:migrate
  - rake db:seed
+ 
   
  
  PostgreSQL:
@@ -42,6 +45,7 @@
  DB pass: manager
  
  $ psql service -h 127.0.0.1 -d serviceManager
+ 
  
  
  Template:
