@@ -29,6 +29,11 @@
  - Ucomment unicorn gem in Gemfile
  - Navigate to /var/www/serviceapi
  - Run command: bundle install
+ - Reload vagrant: vagrant reload (exit from ssh first)
+ 
+ Initial Rails Commands
+ - rake db:migrate
+ - rake db:seed
   
  
  PostgreSQL:
