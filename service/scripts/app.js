@@ -36,13 +36,18 @@ Managerno.config(function ($routeProvider, $httpProvider) {
     $httpProvider.interceptors.push("httpInterceptor");
 });
 
-Managerno.factory("httpInterceptor", ["$q", "$location", function ($q, $location) {
+Managerno.factory("httpInterceptor", ["$q", "$location", "currentUserServices", function ($q, $location, currentUserServices) {
     return {
         'request': function (config) {
-            if (config.url !== appConfig.baseUrlLogin) {
-                config.headers["Authorization"] = "Bearer " + sessionStorage.getItem("Token");
+            config.headers["Accept"] = "application/json";
+            config.headers["Authorization"] = "";
+            if (sessionStorage.getItem("token") != null) {
+                config.headers["Authorization"] = "Token token=" + sessionStorage.getItem("token");
             } else {
-                config.headers["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8";
+                if (localStorage.getItem("token") != null) {
+                    sessionStorage.setItem("token", localStorage.getItem("token"));
+                    config.headers["Authorization"] = "Token token=" + sessionStorage.getItem("token");
+                }
             }
             return config;
         },
@@ -55,9 +60,8 @@ Managerno.factory("httpInterceptor", ["$q", "$location", function ($q, $location
             return response || $q.when(response);
         },
         'responseError': function (rejection) {
-            if (rejection.status === 401) {
-                console.log("Response Error 401", rejection);
-                $location.path("/login").search("returnTo", "/home");
+            if (rejection.status === 401 && rejection.config.url !== appConfig.urlLogin) {
+                $location.path("/login");
             }
             return $q.reject(rejection);
         }

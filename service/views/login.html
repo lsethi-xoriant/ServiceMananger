@@ -13,23 +13,37 @@
             </div>
             <div class="hpanel">
                 <div class="panel-body">
-                    <form action="#" id="loginForm">
+                    <form ng-submit="loginFromForm(loginForm.$valid)" name="loginForm" novalidate>
                         <div class="form-group">
                             <label class="control-label" for="username">Username</label>
-                            <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
+                            <input type="text" ng-model="userData.username" placeholder="example@gmail.com" title="Please enter your username" required name="username" id="username" class="form-control">
                             <span class="help-block small">Your unique username to app</span>
+                            <div class="m-t-xs" ng-show="loginForm.username.$invalid && !loginForm.username.$pristine">
+                                <span class="text-danger" ng-show="loginForm.username.$error"><i class="fa fa-exclamation-triangle"></i> This field is required</span>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="password">Password</label>
-                            <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
+                            <input type="password" ng-model="userData.password" title="Please enter your password" placeholder="******" required name="password" id="password" class="form-control">
                             <span class="help-block small">Your strong password</span>
+                            <div class="m-t-xs" ng-show="loginForm.password.$invalid && !loginForm.password.$pristine">
+                                <span class="text-danger" ng-show="loginForm.password.$error"><i class="fa fa-exclamation-triangle"></i> This field is required</span>
+                            </div>
                         </div>
                         <div class="checkbox">
-                            <input icheck type="checkbox" ng-model="remember" ng-init="remember = true">
+                            <input icheck type="checkbox" ng-model="userData.remember" ng-init="remember = true">
                             Remember login
                             <p class="help-block small">( if this is a private computer )</p>
                         </div>
-                        <button class="btn btn-success btn-block">Login</button>
+                        <div class="form-group">
+                            <div class="m-t-xs" ng-show="loginStatus != constants.spinnerStatus.start">
+                                <div ng-show="loginStatus == constants.spinnerStatus.saving" class="spinner-center">
+                                    <img src="../images/loading-bars.svg" width="25"/> Please wait!
+                                </div>
+                                <span class="text-danger" ng-show="loginStatus == constants.spinnerStatus.error"><i class="fa fa-exclamation-triangle"></i> Check Username or Password</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-block" ng-disabled="loginForm.$invalid">Login</button>
                         <a class="btn btn-default btn-block" href="#">Register</a>
                     </form>
                 </div>
