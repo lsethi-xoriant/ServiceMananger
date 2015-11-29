@@ -22,22 +22,16 @@
                 localStorage.setItem("lastVisitedUrl", document.location.hash);
 
                 var token = sessionStorage.getItem("token");
-                var profile = null;
+                var profile = JSON.parse(sessionStorage.getItem("profile"));
+                
+                if (typeof token === "undefined") return false;
+                if (token === null) return false;
+                if (token === "") return false;
+                if (typeof profile === "undefined") return false;
+                if (profile === null) return false;
+                if (profile === "") return false;
 
-                if (sessionStorage.getItem("token") == null) {
-                    profile = JSON.parse(localStorage.getItem("profile"));
-                } else {
-                    profile = JSON.parse(sessionStorage.getItem("profile"));
-                }
-
-                if (token != null) {
-                    if (typeof profile === "undefined") return false;
-                    if (profile === null) return false;
-                    if (profile === "") return false;
-                    return true;
-                } else {
-                    return false;
-                }
+                return true;
             }
         }
     }
