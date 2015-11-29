@@ -2,6 +2,12 @@
 <aside id="menu" ng-include="'views/common/navigation.html'"></aside>
 
 <div id="wrapper">
+    <div id="breadcrumb" ng-include="'views/common/breadcrumb.html'"></div>
+
+    <div class="content">
+        <div ui-view animate-panel></div>
+    </div>
+
     <div class="content" animate-panel effect="zoomIn">
         <div class="row">
             <div class="col-lg-12 text-center m-t-md">
