@@ -6,6 +6,8 @@ class Api::RegistrationController < ApplicationController
   def create
       @user = User.new(registration_account_params)
       @user.validation_trigger = false
+      @user.auth_token= generate_new_token
+      @user.groups << Group.where(:name => "Account_Owner").first
       if @user.save
         render json: @user,status: 200
       else
@@ -18,6 +20,10 @@ class Api::RegistrationController < ApplicationController
 
   def registration_account_params
     params.require(:registration).permit(:email,:username,:password,:password_confirmation,:account_package_id)
+  end
+
+  def generate_new_token
+    SecureRandom.uuid.gsub(/\-/,'')
   end
 
 end

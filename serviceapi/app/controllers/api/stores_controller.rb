@@ -1,17 +1,19 @@
 class Api::StoresController < ApplicationController
+  respond_to :json
+
   load_and_authorize_resource
   before_filter :check_company_id ,:only=> :update
 
   def index
     @stores = Store.accessible_by(current_ability)
-    render json: @stores
+    respond_with @stores,status: 200
   end
 
   def create
     @store = Store.create(store_params)
     @store.users << current_user
     if @store.save
-      render json: @store,status: 201
+      respond_with @store,status: 201
     else
       render json: @store.errors,status: :unprocessable_entity
     end
@@ -19,13 +21,13 @@ class Api::StoresController < ApplicationController
 
   def show
     @store = Store.find(params[:id])
-    render json: @store
+   respond_with @store,status: 200
   end
 
   def update
     @store = Store.find(params[:id])
     if @store.update_attributes(store_params)
-      render json: @store,status: 200
+      respond_with @store,status: 200
     else
       render json: @store.errors,status: 404
     end

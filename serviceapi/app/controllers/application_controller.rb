@@ -28,12 +28,13 @@ class ApplicationController < ActionController::Base
 
   def render_unauthorize
     self.headers['WWW-Authenticate'] = 'Token realm = "Application"'
-    render json:{message:"You Are Not Login!"},status: 401
+    render json:{message:"You are not logged in!"},status: 401
   end
 
   def current_user
     authenticate_token
   end
+
 
 
 

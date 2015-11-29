@@ -1,6 +1,8 @@
 class Api::GroupsController < ApplicationController
   include ReusableMethods
 
+  respond_to :json
+
   load_and_authorize_resource
 
   before_action :check_param,only: [:update,:create]
@@ -8,19 +10,19 @@ class Api::GroupsController < ApplicationController
   def index
     @groups = Group.accessible_by(current_ability)
     @groups = @groups.uniq
-    render json: @groups,status: :ok
+    respond_with @groups,status: :ok
   end
 
   def show
     @group = Group.find(params[:id])
-    render json: @group , status: :ok
+    respond_with @group , status: :ok
   end
 
   def create
     @group = Group.new(group_params)
     @group.validation_trigger = true
     if @group.save
-      render json: @group,status: 201
+      respond_with @group,status: 201
     else
       render json: @group.errors,status: :unprocessable_entity
     end
@@ -29,7 +31,7 @@ class Api::GroupsController < ApplicationController
   def update
     @group = Group.find(params[:id])
     if @group.update_attributes(group_params)
-      render json: @group,status: 200
+      respond_with @group,status: 200
     else
       render json: @group.errors,status: 404
     end
