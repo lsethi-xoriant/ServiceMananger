@@ -36,7 +36,7 @@ Managerno.config(function ($routeProvider, $httpProvider) {
     $httpProvider.interceptors.push("httpInterceptor");
 });
 
-Managerno.factory("httpInterceptor", ["$q", "$location", "currentUserServices", function ($q, $location, currentUserServices) {
+Managerno.factory("httpInterceptor", ["$q", "$location", function ($q, $location) {
     return {
         'request': function (config) {
             config.headers["Accept"] = "application/json";
