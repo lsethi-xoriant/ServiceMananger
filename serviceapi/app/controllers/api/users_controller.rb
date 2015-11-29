@@ -17,7 +17,7 @@ class Api::UsersController < ApplicationController
     if @user.save
       respond_with @user,status: 201
     else
-      respond_with @user.errors,status: :unprocessable_entity
+      render json: @user.errors,status: :unprocessable_entity
     end
   end
 
