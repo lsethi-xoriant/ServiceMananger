@@ -1,4 +1,4 @@
-json.users do
+
   json.array! @users do |user|
     json.id user.id
     json.username user.username
@@ -17,4 +17,3 @@ json.users do
       json.array! user.stores,:id,:name
     end
   end
-end
