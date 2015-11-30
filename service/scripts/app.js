@@ -36,28 +36,19 @@ Managerno.config(function ($routeProvider, $httpProvider, $translateProvider) {
 
     $httpProvider.interceptors.push("httpInterceptor");
 
-    $translateProvider.translations('en', {
-        HEADLINE: 'Hello there, This is Loyalty Studio awesome app!',
-        INTRO_TEXT: 'And it has i18n support! Yupi...'
-    }).translations('de', {
-        HEADLINE: 'Hey, das ist meine großartige App!',
-        INTRO_TEXT: 'Und sie untersützt mehrere Sprachen!'
-    });
-
-    //$translateProvider.preferredLanguage('en');
+    $translateProvider
+        .translations("en", langEn)
+        .translations("bs", langBs);
 
     $translateProvider.determinePreferredLanguage(function () {
-        // define a function to determine the language
-        // and return a language key
         var savedProfile = JSON.parse(sessionStorage.getItem("profile"));
 
-        if (savedProfile == undefined) {
+        if (savedProfile == undefined)
             savedProfile = JSON.parse(localStorage.getItem("profile"));
-        }
 
-        if (savedProfile == undefined) {
+        if (savedProfile == undefined || savedProfile.language == undefined)
             savedProfile = { language: "en" }
-        }
+        
         return savedProfile.language;
     });
 
