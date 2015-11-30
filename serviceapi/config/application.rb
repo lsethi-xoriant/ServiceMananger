@@ -18,6 +18,9 @@ module Serviceapi
 
     config.active_record.raise_in_transactional_callbacks = true
 
+    I18n.available_locales = [:en, :de]
+    config.i18n.default_locale = :en
+
     config.autoload_paths << Rails.root.join('lib')
   end
 end
