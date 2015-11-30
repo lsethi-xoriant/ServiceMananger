@@ -18,6 +18,11 @@
                 return profile;
             },
 
+            getLanguage: function () {
+                var profile = JSON.parse(sessionStorage.getItem("profile"));
+                return profile.language;
+            },
+
             loggedIn: function () {
                 localStorage.setItem("lastVisitedUrl", document.location.hash);
 

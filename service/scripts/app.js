@@ -2,6 +2,7 @@
 
 var Managerno = angular.module("Managerno", [
     "ngRoute",
+    "pascalprecht.translate",
     "ui.bootstrap",
     "managernoControllers",
     "managernoServices",
@@ -14,7 +15,7 @@ var managernoServices = angular.module("managernoServices", []);
 var managernoDirectives = angular.module("managernoDirectives", []);
 var managernoFilters = angular.module("managernoFilters", []);
 
-Managerno.config(function ($routeProvider, $httpProvider) {
+Managerno.config(function ($routeProvider, $httpProvider, $translateProvider) {
     $routeProvider
         .when("/dashboard", {
             templateUrl: "views/dashboard.html",
@@ -34,6 +35,32 @@ Managerno.config(function ($routeProvider, $httpProvider) {
         .otherwise({ redirectTo: "/dashboard" });
 
     $httpProvider.interceptors.push("httpInterceptor");
+
+    $translateProvider.translations('en', {
+        HEADLINE: 'Hello there, This is Loyalty Studio awesome app!',
+        INTRO_TEXT: 'And it has i18n support! Yupi...'
+    }).translations('de', {
+        HEADLINE: 'Hey, das ist meine großartige App!',
+        INTRO_TEXT: 'Und sie untersützt mehrere Sprachen!'
+    });
+
+    //$translateProvider.preferredLanguage('en');
+
+    $translateProvider.determinePreferredLanguage(function () {
+        // define a function to determine the language
+        // and return a language key
+        var savedProfile = JSON.parse(sessionStorage.getItem("profile"));
+
+        if (savedProfile == undefined) {
+            savedProfile = JSON.parse(localStorage.getItem("profile"));
+        }
+
+        if (savedProfile == undefined) {
+            savedProfile = { language: "en" }
+        }
+        return savedProfile.language;
+    });
+
 });
 
 Managerno.factory("httpInterceptor", ["$q", "$location", function ($q, $location) {
