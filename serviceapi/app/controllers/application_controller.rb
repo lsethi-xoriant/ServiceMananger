@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
 
-  before_action :restrict_access
-   check_authorization
+  before_action :restrict_access,:set_locale
+  check_authorization
 
 
   helper_method :current_user
@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
 
   def restrict_access
     authenticate_token || render_unauthorize
+  end
+
+  def set_locale
+    I18n.locale = current_user.language || I18n.default_locale
   end
 
 

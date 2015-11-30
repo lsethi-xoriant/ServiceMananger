@@ -34,8 +34,8 @@ stores = [
 ]
 
 users = [
-    ["user1","user1","user1@gmail.com",1,1],
-    ["user2","user2","user2@gmail.com",2,2]
+    ["user1","user1","user1@gmail.com",1,1,"en"],
+    ["user2","user2","user2@gmail.com",2,2,"de"]
     # ["osman","osman","osman@gmail.com"],
     # ["ado pado","ado","ado_pado@gmail.com"]
 ]
@@ -57,8 +57,8 @@ end
 account_package.each do |name,description|
     AccountPackage.create!({name:name,description:description})
 end
-users.each do |username,pass,email,account_package_id,company_id|
-    User.create!({username:username,password:pass,email:email,account_package_id:account_package_id,company_ids:[company_id]})
+users.each do |username,pass,email,account_package_id,company_id,language|
+    User.create!({username:username,password:pass,email:email,account_package_id:account_package_id,company_ids:[company_id],language:language})
 end
 
 
