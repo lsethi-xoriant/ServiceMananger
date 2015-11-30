@@ -16,7 +16,7 @@
  - Open console and navigate to this folder
  - Run "vagrant up"
  - Run "vagrant provision"
- - SSH to vagrant and run command: sudo apt-get install libpq-dev build-essential
+ - SSH to vagrant and run command: sudo apt-get install libpq-dev build-essential -y
  - Go to /etc/postgresql/9.3/main and open pg_hba.conf with command: sudo nano pg_hba.conf
  - Change line ( local   all     all             ident ) to ( local   all     all             md5 )
  - Reload vagrant: vagrant reload (exit from ssh first)
