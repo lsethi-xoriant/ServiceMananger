@@ -38,8 +38,8 @@ Managerno.config(function ($routeProvider, $httpProvider, $translateProvider) {
 
     $translateProvider
         .translations("en", langEn)
-        .translations("bs", langBs)
-        .translations("de", langDe);
+        .translations("bs", langBs);
+        //.translations("de", langDe);
 
     $translateProvider.determinePreferredLanguage(function () {
         var savedProfile = JSON.parse(sessionStorage.getItem("profile"));

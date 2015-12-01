@@ -11,7 +11,7 @@
                         console.log("Login success!");
                     })
                  .error(function (data, status, headers, config) {
-                     deffered.reject(status);
+                     deffered.reject(data);
                      console.log("Unable to login!");
                  });
                 return deffered.promise;

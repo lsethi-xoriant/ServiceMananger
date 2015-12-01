@@ -6,6 +6,7 @@
         $scope.userData.remember = false;
         $scope.constants = constants;
         $scope.loginStatus = constants.spinnerStatus.start;
+        $scope.loginMessage = "";
 
         $scope.loginFromForm = function (formValid) {
             $scope.loginStatus = constants.spinnerStatus.saving;
@@ -23,6 +24,7 @@
                     },
                     function (status) {
                         $scope.loginStatus = constants.spinnerStatus.error;
+                        $scope.loginMessage = status.message;
                     }
                 );
             }
