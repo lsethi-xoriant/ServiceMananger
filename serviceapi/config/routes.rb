@@ -2,7 +2,11 @@ Rails.application.routes.draw do
  namespace :api,defaults:{format: 'json'} do
 
    resources :users,except:[:new,:edit]
-   resources :access,only:[:create,:destroy]
+   resources :access,only:[:create] do
+     collection  do
+       delete :logout
+     end
+   end
    resources :groups,except:[:new,:edit]
    resources :permissions ,only:[:index]
    resources :companies,exept:[:new,:edit]

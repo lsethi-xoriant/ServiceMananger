@@ -16,7 +16,7 @@ class Ability
       elsif user.permissions?(:employee)
 
       else
-          # can :manage, Access
+           # can :manage, Access
          # raise CanCan::AccessDenied
       end
 

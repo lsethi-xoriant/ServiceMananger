@@ -12,6 +12,7 @@ module Abilities
       can :read,Permission
       can :manage,User,companies:{id:user.companies.pluck(:id)}
       can :create,User
+      can :logout, :access
     end
   end
 end

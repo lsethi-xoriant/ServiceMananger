@@ -21,3 +21,5 @@
 
 en:
   hello: "Hello world"
+  accessMessage: "Bad Credentials"
+  logoutMessage: "Successfully Logout"
