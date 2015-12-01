@@ -1,10 +1,10 @@
 class Api::AccessController < ApplicationController
   respond_to :json
 
-  skip_authorization_check :only => [:create]
-  authorize_resource :class => false
-  skip_before_action :restrict_access ,only: :create
-  skip_before_action :set_locale ,only: :create
+  skip_authorization_check :only => [:create,:logout]
+
+  skip_before_action :restrict_access,:set_locale ,only: :create
+
 
   def create
     @user = User.where(:username=>params[:access][:username]).first
