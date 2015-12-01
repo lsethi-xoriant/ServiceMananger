@@ -2,10 +2,12 @@
     "use strict";
 
     function dashboardController($scope, $http, $location, currentUserServices) {
-        if (!currentUserServices.loggedIn())
+        if (!currentUserServices.loggedIn()) {
             $location.path("/login");
+            return;
+        }
 
-        $scope.breadcrumb = constants.breadcrumb.dashboard;
+        $scope.breadcrumb = currentUserServices.getBreadcrumb(breadcrumbConst.dashboard);
     }
 
     managernoControllers.controller("dashboardController", dashboardController);

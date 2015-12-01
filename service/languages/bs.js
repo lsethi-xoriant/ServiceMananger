@@ -1,6 +1,7 @@
 ﻿langBs = {
     APP_NAME: "Managerno",
     APP_MOTO: "Upravljajte vašim servisom na ispravan način!",
+    APP_WELCOME: "Dobrodošli u Managerno",
     COPYRIGHT: new Date().getFullYear() + " Autorsko pravo Loyalty Studio",
     LOGIN_PLEASE_LOGIN_TO_APP: "MOLIMO PRIJAVITE SE",
     LOGIN_WELCOME: "Drago nam je da Vas ponovo vidimo!",

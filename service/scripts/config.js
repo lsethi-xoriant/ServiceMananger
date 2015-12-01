@@ -11,3 +11,5 @@ if (document.location.hostname === "service.dev") {
 appConfig.urlLogin = appConfig.baseUrlApi + "access";
 appConfig.urlLogout = appConfig.baseUrlApi + "logout";
 appConfig.urlNoImage = appConfig.baseUrl + "content/images/realestates/NoImage_a.jpg";
+
+appConfig.languageDefaul = "en";
