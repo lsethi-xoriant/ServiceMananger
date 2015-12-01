@@ -3,9 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
 
+  check_authorization
+
   before_action :restrict_access
   before_action :set_locale
-  check_authorization
 
 
   helper_method :current_user
