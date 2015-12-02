@@ -2,6 +2,8 @@
     APP_NAME: "Managerno",
     APP_MOTO: "Manage your service on the right way!",
     APP_WELCOME: "Welcome to Managerno",
+    LOGIN: "Login",
+    LOGOUT: "Logout",
     COPYRIGHT: new Date().getFullYear() + " Copyright Loyalty Studio",
     LOGIN_PLEASE_LOGIN_TO_APP: "PLEASE LOGIN TO APP",
     LOGIN_WELCOME: "We are glad to see you again!",

@@ -24,7 +24,7 @@
                 sessionStorage.removeItem("profile");
 
                 var deffered = $q.defer();
-                $http.post(appConfig.urlLogout, userData)
+                $http.delete(appConfig.urlLogout)
                     .success(function (data, status, headers, config) {
                         deffered.resolve(data);
                         console.log("Logout success!");

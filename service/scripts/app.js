@@ -26,8 +26,8 @@ Managerno.config(function ($routeProvider, $httpProvider, $translateProvider) {
             controller: "loginController"
         })
         .when("/logout", {
-            templateUrl: "views/admin/logout.html",
-            controller: "LogoutController"
+            templateUrl: "views/logout.html",
+            controller: "logoutController"
         })
         .when("/error", {
             templateUrl: "views/admin/error.html"

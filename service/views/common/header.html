@@ -15,7 +15,7 @@
         <div class="collapse mobile-navbar" id="mobile-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">Login</a>
+                    <a href="#/logout">{{ 'LOGOUT' | translate }}</a>
                 </li>
             </ul>
         </div>
@@ -23,14 +23,10 @@
     <div class="navbar-right">
         <ul class="nav navbar-nav no-borders">
             <li class="dropdown">
-                <a ng-href="#/login">
-                    <i class="pe-7s-upload pe-rotate-90"></i>
+                <a href="#/logout">
+                    <i class="pe-7s-upload pe-rotate-90"></i> <span style="font-size: 0.8em">{{ 'LOGOUT' | translate }}</span>
                 </a>
             </li>
         </ul>
     </div>
 </nav>
-
-
-
-
