@@ -8,6 +8,7 @@
         }
 
         $scope.breadcrumb = currentUserServices.getBreadcrumb(breadcrumbConst.dashboard);
+        $scope.userData = currentUserServices.getProfile();
     }
 
     managernoControllers.controller("dashboardController", dashboardController);

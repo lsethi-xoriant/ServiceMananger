@@ -1,21 +1,10 @@
 <div id="navigation">
     <div class="profile-picture">
         <a href="#/dashboard">
-            <img src="/images/logo-demo.png" class="img-circle m-b" alt="logo">
+            <img ng-src="{{ userData.image }}" class="img-circle m-b" alt="logo">
         </a>
         <div class="stats-label text-color">
-            <span class="font-extra-bold font-uppercase">Osman</span>
-
-            <div class="dropdown" dropdown>
-                <a dropdown-toggle class="dropdown-toggle" href="#">
-                    <small class="text-muted">Founder of App <b class="caret"></b></small>
-                </a>
-                <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                    <li><a ui-sref="app_views.profile">Profile</a></li>
-                    <li class="divider"></li>
-                    <li><a ui-sref="common.login">Logout</a></li>
-                </ul>
-            </div>
+            <span class="font-extra-bold font-uppercase">{{ userData.username }}</span>
         </div>
     </div>
 
