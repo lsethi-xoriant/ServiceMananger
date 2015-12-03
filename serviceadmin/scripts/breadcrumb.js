@@ -32,7 +32,7 @@ breadcrumbConst.company = [
         lang: "bs",
         value: {
             subject: "Kompanije",
-            message: "Lista Vaših kompanija",
+            message: "",
             links: [
                 {
                     href: "#/",
@@ -48,8 +48,8 @@ breadcrumbConst.company = [
     {
         lang: "en",
         value: {
-            subject: "Dashboard",
-            message: "Welcome to Managerno",
+            subject: "Companies",
+            message: "",
             links: [
                 {
                     href: "#/",
