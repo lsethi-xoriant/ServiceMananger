@@ -1,5 +1,4 @@
   json.id  @user.id
-  json.username  @user.username
   json.email  @user.email
   json.account_package_id  @user.account_package_id
   json.language @user.language
