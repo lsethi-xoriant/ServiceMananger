@@ -9,7 +9,7 @@
     LOGIN_WELCOME: "Drago nam je da Vas ponovo vidimo!",
     LOGIN_REMEMBER: "Zapamti prijavu",
     LOGIN_IF_PRIVATE_COMPUTER: "ako je ovo privatni uređaj",
-    USERNAME: "Korisničko ime",
+    EMAIL: "E-mail",
     PASSWORD: "Lozinka",
     BUTTON_BACK_TO_DASHBOARD: "Nazad na Dashboard",
     BUTTON_LOGIN: "Prijava",

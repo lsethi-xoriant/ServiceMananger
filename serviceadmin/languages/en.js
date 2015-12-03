@@ -9,7 +9,7 @@
     LOGIN_WELCOME: "We are glad to see you again!",
     LOGIN_REMEMBER: "Remember login",
     LOGIN_IF_PRIVATE_COMPUTER: "if this is a private computer",
-    USERNAME: "Username",
+    EMAIL: "E-mail",
     PASSWORD: "Password",
     BUTTON_BACK_TO_DASHBOARD: "Back to Dashboard",
     BUTTON_LOGIN: "Login",
