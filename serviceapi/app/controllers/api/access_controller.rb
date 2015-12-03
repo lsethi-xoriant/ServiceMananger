@@ -7,7 +7,7 @@ class Api::AccessController < ApplicationController
 
 
   def create
-    @user = User.where(:username=>params[:access][:username]).first
+    @user = User.where(:email=>params[:access][:email]).first
     I18n.locale = @user.language if @user.present?
     if @user && @user.authenticate(params[:access][:password])
       token = generate_new_token
