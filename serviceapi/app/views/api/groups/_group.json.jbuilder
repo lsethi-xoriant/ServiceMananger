@@ -2,7 +2,7 @@ json.id @group.id
 json.name @group.name
 
 json.users do
-  json.array! @group.users,:id,:username
+  json.array! @group.users,:id,:first_name
 end
 
 json.permissions do

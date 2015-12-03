@@ -5,7 +5,7 @@ json.city @company.city
 json.country @company.country
 
 json.users do
-  json.array! @company.users,:id,:username
+  json.array! @company.users,:id,:first_name
 end
 
 json.groups do

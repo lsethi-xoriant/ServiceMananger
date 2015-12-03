@@ -9,7 +9,7 @@
     end
 
     json.users do
-      json.array! company.users,:id,:username
+      json.array! company.users,:id,:first_name
     end
     json.stores do
       json.array! company.stores,:id,:name

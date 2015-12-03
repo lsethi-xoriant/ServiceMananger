@@ -8,7 +8,7 @@ json.stores do
     json.company store.company,:id,:name
 
     json.users do
-      json.array! store.users,:id,:username
+      json.array! store.users,:id,:first_name
     end
     json.groups do
       json.array! store.groups,:id,:name
