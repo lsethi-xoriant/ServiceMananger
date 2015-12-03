@@ -32,6 +32,10 @@ Managerno.config(function ($routeProvider, $httpProvider, $translateProvider) {
         .when("/error", {
             templateUrl: "views/admin/error.html"
         })
+        .when("/company", {
+            templateUrl: "views/company.html",
+            controller: "companyController"
+        })
         .otherwise({ redirectTo: "/dashboard" });
 
     $httpProvider.interceptors.push("httpInterceptor");
