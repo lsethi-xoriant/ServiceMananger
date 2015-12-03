@@ -3,6 +3,7 @@
     json.id company.id
     json.name company.name
     json.email company.email
+    json.image_url company.image_url
 
     json.groups do
       json.array! company.groups,:id,:name

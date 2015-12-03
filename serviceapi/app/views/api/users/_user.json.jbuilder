@@ -7,7 +7,6 @@
   json.last_name @user.last_name
   json.image_url @user.image_url
 
-
   json.groups do
     json.array! @user.groups,:id,:name unless @user.groups.empty?
   end
