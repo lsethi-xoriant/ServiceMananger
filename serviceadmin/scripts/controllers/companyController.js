@@ -9,7 +9,7 @@
 
         $scope.breadcrumb = currentUserServices.getBreadcrumb(breadcrumbConst.company);
         $scope.userData = currentUserServices.getProfile();
-
+        $scope.url = appConfig.url;
         $scope.companies = [];
 
         companyService.getCompanies().then(

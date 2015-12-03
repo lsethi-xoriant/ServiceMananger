@@ -8,8 +8,11 @@ if (document.location.hostname === "serviceadmin.dev") {
     appConfig.baseUrlApi = appConfig.baseUrl + "api/";
 }
 
-appConfig.urlLogin = appConfig.baseUrlApi + "access";
-appConfig.urlLogout = appConfig.baseUrlApi + "access/logout";
+appConfig.urlLogin = appConfig.baseUrlApi + "access/";
+appConfig.urlLogout = appConfig.baseUrlApi + "access/logout/";
 appConfig.urlNoImage = appConfig.baseUrl + "content/images/realestates/NoImage_a.jpg";
+
+appConfig.url = {};
+appConfig.url.companies = "/#/companies/";
 
 appConfig.languageDefaul = "en";
