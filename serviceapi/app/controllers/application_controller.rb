@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
 
   check_authorization
 
-  before_action :restrict_access
-  before_action :set_locale
+  before_action :restrict_access,:set_locale
 
 
   helper_method :current_user
