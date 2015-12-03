@@ -241,5 +241,5 @@ bs:
       long: "%d. %B %Y. - %H:%M:%S"
       short: "%d. %b %Y. %H:%M"
     pm: ''
-  accessMessage: "Kombinacija username i password nisu uredu"
+  accessMessage: "Kombinacija username i password-a nije dobra"
   logoutMessage: "Uspjesno ste odjavljeni"

@@ -7,7 +7,7 @@
       json.array! group.permissions,:id,:name
     end
     json.users do
-      json.array! group.users,:id,:name
+      json.array! group.users,:id,:first_name
     end
     json.stores do
       json.array! group.stores,:id,:name

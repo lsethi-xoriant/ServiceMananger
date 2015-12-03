@@ -3,8 +3,7 @@ class Api::CompaniesController < ApplicationController
   load_and_authorize_resource
   def index
     @companies = Company.accessible_by(current_ability)
-   # respond_with @companies,status: 200
-    render json: I18n.locale
+    respond_with @companies,status: 200
   end
 
   def create

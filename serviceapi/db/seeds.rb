@@ -57,8 +57,8 @@ end
 account_package.each do |name,description|
     AccountPackage.create!({name:name,description:description})
 end
-users.each do |username,pass,email,account_package_id,company_id,language|
-    User.create!({username:username,password:pass,email:email,account_package_id:account_package_id,company_ids:[company_id],language:language})
+users.each do |first_name,pass,email,account_package_id,company_id,language|
+    User.create!({first_name:first_name,password:pass,email:email,account_package_id:account_package_id,company_ids:[company_id],language:language})
 end
 
 

@@ -2,8 +2,10 @@
   json.username  @user.username
   json.email  @user.email
   json.account_package_id  @user.account_package_id
-   json.language @user.language
-
+  json.language @user.language
+  json.first_name @user.first_name
+  json.last_name @user.last_name
+  json.image_url @user.image_url
 
   json.groups do
     json.array! @user.groups,:id,:name unless @user.groups.empty?
