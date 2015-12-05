@@ -4,6 +4,7 @@
     json.name company.name
     json.email company.email
     json.city company.city
+    json.address company.address
     json.image_url company.image_url
 
     json.groups do

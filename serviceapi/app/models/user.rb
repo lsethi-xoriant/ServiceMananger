@@ -23,8 +23,8 @@ class User < ActiveRecord::Base
             :format => VALID_EMAIL,
             :uniqueness => true
 
-  # validates :first_name,
-  #           :presence => true
+  validates :first_name,
+            :presence => true
   validates :company_ids,
             :presence => true ,:if=> :should_validate?
   validates :account_package_id,
