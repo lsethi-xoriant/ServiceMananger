@@ -48,17 +48,17 @@
  
  
  
- Configure host file:
+ Configure host file
+ 
  Amazon
- 52.19.28.47 service.web
- 52.19.28.47 admin.service.web
- 52.19.28.47 api.service.web
- 
- 
+ - 52.19.28.47 service.web
+ - 52.19.28.47 admin.service.web
+ - 52.19.28.47 api.service.web
+  
  Vagrant Local
- 192.168.30.101 service.dev
- 192.168.30.101 serviceadmin.dev
- 192.168.30.101 serviceapi.dev
+ - 192.168.30.101 service.dev
+ - 192.168.30.101 serviceadmin.dev
+ - 192.168.30.101 serviceapi.dev
  
  
  
