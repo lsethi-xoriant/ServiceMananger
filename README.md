@@ -61,6 +61,8 @@
  - 192.168.30.101 serviceapi.dev
  
  
+ Note: After geting new ubuntu vagrant box files in D:\Mega\LoyaltyStudio\ServiceManager\puphpet\files\exec-always foler didn't run correctly. Run it manual.
+ 
  
  Template:
  
