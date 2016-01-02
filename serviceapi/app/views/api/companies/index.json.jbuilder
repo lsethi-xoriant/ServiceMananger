@@ -5,7 +5,7 @@
     json.email company.email
     json.city company.city
     json.address company.address
-    json.image_url company.image_url
+    json.logoImageLink company.logoImageLink
 
     json.groups do
       json.array! company.groups,:id,:name
