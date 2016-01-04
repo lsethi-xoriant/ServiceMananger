@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'image/create'
+
  namespace :api,defaults:{format: 'json'} do
 
    resources :users,except:[:new,:edit]
@@ -13,6 +15,6 @@ Rails.application.routes.draw do
    resources :stores,exept:[:new,:edit]
    resources :account_packages,only:[:index]
    resources :registration,only:[:create]
-
+   resources :image,only:[:create]
  end
 end

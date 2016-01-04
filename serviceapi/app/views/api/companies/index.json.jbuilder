@@ -3,7 +3,9 @@
     json.id company.id
     json.name company.name
     json.email company.email
-    json.image_url company.image_url
+    json.city company.city
+    json.address company.address
+    json.logoImageLink company.logoImageLink
 
     json.groups do
       json.array! company.groups,:id,:name

@@ -48,6 +48,22 @@
  
  
  
+ Configure host file
+ 
+ Amazon
+ - 52.19.28.47 service.web
+ - 52.19.28.47 admin.service.web
+ - 52.19.28.47 api.service.web
+  
+ Vagrant Local
+ - 192.168.30.101 service.dev
+ - 192.168.30.101 serviceadmin.dev
+ - 192.168.30.101 serviceapi.dev
+ 
+ 
+ Note: After geting new ubuntu vagrant box files in D:\Mega\LoyaltyStudio\ServiceManager\puphpet\files\exec-always foler didn't run correctly. Run it manual.
+ 
+ 
  Template:
  
  http://webapplayers.com/homer_admin-v1.7/
