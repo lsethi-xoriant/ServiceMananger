@@ -1,5 +1,4 @@
 var appConfig = {};
-
 if (document.location.hostname === "serviceadmin.dev") {
     appConfig.baseUrl = "http://serviceapi.dev/";
     appConfig.baseUrlApi = appConfig.baseUrl + "api/";

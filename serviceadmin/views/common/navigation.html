@@ -38,4 +38,22 @@
             <a ui-sref="landing"> <span class="nav-label">Landing page</span> <span class="label label-warning pull-right">NEW</span> </a>
         </li>
     </ul>
+
+    <div class="profile-picture">
+        <a href="#/dashboard">
+            <img ng-src="{{ userData.image }}" class="img-circle m-b" alt="logo">
+        </a>
+        <div class="stats-label text-color">
+            <span class="font-extra-bold font-uppercase">{{ userData.username }}</span>
+        </div>
+    </div>
+    <ul side-navigation class="nav" id="side-menu">
+        <li>
+            <a href="#"><span class="nav-label">Stores</span><span class="fa arrow"></span> </a>
+            <ul class="nav nav-second-level">
+               <li  ui-sref-active="active"><a href=""> <span class="nav-label">Some Store</span></a></li>
+               <li  ui-sref-active="active"> <a href=""> <span class="nav-label">Some Store</span></a></li>
+            </ul>
+        </li>
+    </ul>
 </div>

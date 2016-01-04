@@ -1,0 +1,714 @@
+[33mcommit 6a7474366548b77fac6b2f4cf5f2b51b62c9db75[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Mon Nov 30 16:27:16 2015 +0100
+
+    add language column to user table
+
+[33mcommit 039923bbde69a5a6b4f441d21d3aa85e434541ab[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sun Nov 29 23:18:14 2015 +0100
+
+    re #131 Add breadcrumb
+
+[33mcommit b9e52e7b15fa2adf66884481980cc8d547316934[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sun Nov 29 22:21:08 2015 +0100
+
+    re #76 refactor currentUserService
+
+[33mcommit 0a0915c90d5b18777ca48a81f07274c3ac754d7d[m
+Merge: 810b794 1762c47
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sun Nov 29 21:49:37 2015 +0100
+
+    Merge branch 'master' of https://stensolino.visualstudio.com/DefaultCollection/_git/Service%20Manager
+
+[33mcommit 1762c4798eb088d17443dc9b05927d80a1a612b7[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sun Nov 29 21:49:09 2015 +0100
+
+    fix duble nested user object at acces_ctrl
+
+[33mcommit 810b794b245baf566c11b3ee15e223b28d9cf81b[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sun Nov 29 21:36:57 2015 +0100
+
+    Gemfile.lock
+
+[33mcommit 52d78c2638283fed3adda0fe405b4d7998a901d2[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sun Nov 29 19:31:13 2015 +0100
+
+    re #76 Remove dependency from httpInterceptor
+
+[33mcommit fb29e91cfd261db406e2a2db44e33ed79b90918e[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sun Nov 29 19:28:26 2015 +0100
+
+    re #76 Remove apple and android icons
+
+[33mcommit f434502b212d2244ed0f3cba319b53feb3e4e87d[m
+Merge: 4ce227e cbef1ae
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sun Nov 29 17:51:03 2015 +0100
+
+    Merge branch 'master' of https://stensolino.visualstudio.com/DefaultCollection/_git/Service%20Manager
+
+[33mcommit 4ce227e246bbee9ac17c2b0815ba8af821690e38[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sun Nov 29 17:50:56 2015 +0100
+
+    re #76 Refactor login
+
+[33mcommit cbef1aedc87b073b78c00a3f089a869310f98e71[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sat Nov 28 20:59:03 2015 +0000
+
+    Updated README.md
+
+[33mcommit d7d5cf81bef73b4691bf399364a901efb1e6372c[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sat Nov 28 20:58:19 2015 +0000
+
+    Updated README.md
+
+[33mcommit a98950c7ecc57b560d1daf174b3f86eb88c28c23[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sat Nov 28 20:54:05 2015 +0000
+
+    Updated README.md
+
+[33mcommit 0f7241d9ea968b0667ce6bfba8eabfdf70123ffb[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Nov 27 14:39:51 2015 +0100
+
+    re #117 Refacture store resource json output
+
+[33mcommit 042d7c8dc55fa0cd36ff4d08ba957c57b92322f8[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Nov 27 14:19:38 2015 +0100
+
+    re #117 Refacture group resource json output
+
+[33mcommit cb67132d1d4f046ee524024a8acf9f6d87bb3618[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Nov 27 14:04:14 2015 +0100
+
+    re #117 Refacture company resource json output
+
+[33mcommit a2338219c3c648c716d1c04a777c6180fae9aa82[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Nov 27 13:40:39 2015 +0100
+
+    re #117 refacture permission json output
+
+[33mcommit d29a388d0674f1ae29889bb3f5d2c0f42d109dd0[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Nov 27 12:30:56 2015 +0100
+
+    re #117 refacture access json output,send user with all nested object on login
+
+[33mcommit da230abc69670988067605b790450d717f6ed66c[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Nov 27 12:19:32 2015 +0100
+
+    re #117 refacture user json output,send user with all nested objects
+
+[33mcommit 5c4434ac2eda7147eec96c9392d1720bca858351[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Thu Nov 26 23:26:15 2015 +0100
+
+    re #116 clean unused method account_owner.rb
+
+[33mcommit 1bf045c6f57d75b1deeecdb6033135659a6f451d[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Thu Nov 26 23:20:26 2015 +0100
+
+    re #116 chane ability class(add self.marge)
+
+[33mcommit 8eda28825f5f6ac1179afe1f6b8b59705e9a632e[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Thu Nov 26 20:12:05 2015 +0100
+
+    re #116 refacture ability class,add account_owner and admin class
+
+[33mcommit 00181896af001a06d593127aa0d4badd63bc6522[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Thu Nov 26 19:27:37 2015 +0100
+
+    re #116 create abities module and account owner class
+
+[33mcommit 84d730cd2d6f2abbb906d73927531aa2e687aed4[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 25 21:48:08 2015 +0100
+
+    re #113 fix message  when user in not logged in
+
+[33mcommit a0a932d0adadd9fdc29d6439c25ee5e2f8521e4b[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 25 21:19:55 2015 +0100
+
+    fix add default user group callback,add Account_owner group on registrate
+
+[33mcommit 3f9c1fc3ce6e626e098c236f25af623783a2f690[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 25 20:46:51 2015 +0100
+
+    re #111 return auth_token on registration route
+
+[33mcommit fa1826d3ef9abe3321820920ced2b4dc9d0d8389[m
+Merge: fecc561 74e0ccc
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 25 20:17:43 2015 +0100
+
+    Merge branch 'master' of https://stensolino.visualstudio.com/DefaultCollection/_git/Service%20Manager
+
+[33mcommit fecc561ba2b35d7d25f6772bbef76f0ac644e01f[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 25 20:10:22 2015 +0100
+
+    re #111 reorganize conditional validation
+
+[33mcommit e3b2420209361b30025d1e1c5a86ac34eb6257e4[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 25 18:14:29 2015 +0100
+
+    re #111 create registration controller,change seed files,remove conditional validation,add skip filtet to access
+
+[33mcommit 74e0ccc15fe6ff23d94eed3b5d176b76ed470a81[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Wed Nov 25 17:51:07 2015 +0100
+
+    re #76 Rename app to Managerno
+
+[33mcommit 0c14237d9eefa5c8216e098030fd68db572f93e2[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Wed Nov 25 17:50:20 2015 +0100
+
+    re #78 Add favicon, iPhone and android icons
+
+[33mcommit 3a2be7d1a88d9515771696b840e7d53c090669bc[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Wed Nov 25 11:36:25 2015 +0000
+
+    Updated README.md
+
+[33mcommit c9e440dd9bc8da7f9ed303c1b75c7d2442cdbc1d[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Wed Nov 25 12:13:48 2015 +0100
+
+    Fix gitignore
+
+[33mcommit a907bef7457b1e50f180f09daa79220bb01a6f8f[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Wed Nov 25 12:01:06 2015 +0100
+
+    Fix gitignore
+
+[33mcommit 94c8d42b8c2560a55adb635c33f8cb182e9a5239[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Wed Nov 25 11:49:15 2015 +0100
+
+    Add to gitignore
+
+[33mcommit c8333e26bd29501532c7feef74d0c9b8b153b378[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Wed Nov 25 11:39:13 2015 +0100
+
+    Add to gitignore
+
+[33mcommit 506905c9f99cfeea620ea2a7d14309d7670f38bc[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Wed Nov 25 11:32:40 2015 +0100
+
+    Add template ZIP for UI
+
+[33mcommit 05a8b552b51bba750ad4e1fc5ec9426d15608b38[m
+Merge: 5d884f8 12e3d89
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 25 00:37:47 2015 +0100
+
+    Merge branch 'master' of https://stensolino.visualstudio.com/DefaultCollection/_git/Service%20Manager
+
+[33mcommit 12e3d89f25cb8761f3fd9b581aaf9706e303e78d[m
+Merge: 1231d8a 25b3e96
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Tue Nov 24 23:59:35 2015 +0100
+
+    Merge branch 'master' of https://stensolino.visualstudio.com/DefaultCollection/_git/Service%20Manager
+
+[33mcommit 1231d8ae8274af7794685f942ce2bee65c3f1902[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Tue Nov 24 23:58:51 2015 +0100
+
+    Preparing structure
+
+[33mcommit f77b1d107aa14c488b86724f4dafa3d42fe6c5dc[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Tue Nov 24 20:49:21 2015 +0100
+
+    Start adding template
+
+[33mcommit 8d65351e3188f8c1fe501f1c2392ad1f33304c94[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Tue Nov 24 20:42:30 2015 +0100
+
+    add serviceadmin.dev site to vagrant
+
+[33mcommit 5d884f82a8b7b0d5529c7ae5921ac3a5a4c097a4[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sun Nov 22 22:17:52 2015 +0100
+
+    re #110 add account_package_id column in seed file
+
+[33mcommit 52f02b0bbd29e7cee938115f14b2641651fe7a1b[m
+Merge: ed4e8d1 25b3e96
+Author: osman <osmanperviz@gmail.com>
+Date:   Sun Nov 22 19:14:11 2015 +0100
+
+    Merge branch 'master' of https://stensolino.visualstudio.com/DefaultCollection/_git/Service%20Manager
+
+[33mcommit 25b3e965b64af0a62599f8f6f0ab048ff4bbb0e1[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sun Nov 22 18:06:57 2015 +0000
+
+    Updated README.md
+
+[33mcommit 6cdafd5f8ffcc642b92b6a715afaa701dbfed336[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Sun Nov 22 19:06:04 2015 +0100
+
+    Fix custom installing node and add installation command for npm and bower
+
+[33mcommit ed4e8d14513e93f0c2380906d36ba4b38aa8d27b[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sun Nov 22 12:39:48 2015 +0100
+
+    re #110 set relatioship user->account_package,add colum(account_package_id)in user table
+
+[33mcommit 55ee99a4fda45cc3710fd0f1846166ff8faedb19[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sun Nov 22 12:34:18 2015 +0100
+
+    re # 110 set routes and controler index action for account_package resource
+
+[33mcommit 5a4d0e9c7d1d8b8c92c94fb077eb6a3cc35a217a[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sun Nov 22 12:28:41 2015 +0100
+
+    re #110 create account package resource
+
+[33mcommit 369944ccad9666e04a0ed067518328ce888b9f44[m
+Merge: fff8ce9 f11b63c
+Author: osman <osmanperviz@gmail.com>
+Date:   Sat Nov 21 22:32:48 2015 +0100
+
+    Merge branch 'master' of https://stensolino.visualstudio.com/DefaultCollection/_git/Service%20Manager
+
+[33mcommit fff8ce98c7da716b7ee32b2bb315a777f23ffb54[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sat Nov 21 22:31:08 2015 +0100
+
+    re #108 set ids check on update end point
+
+[33mcommit f11b63c78b3ff776ff2c6e6140ac17b1c6951856[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sat Nov 21 21:10:56 2015 +0000
+
+    Updated README.md
+
+[33mcommit e6c90a75cc66a745da19ce73ac9865bc06943e66[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sat Nov 21 21:09:04 2015 +0000
+
+    Updated README.md
+
+[33mcommit aa10e04567af1b7af47c363fc545c6a5574d9831[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Sat Nov 21 20:58:31 2015 +0000
+
+    Updated README.md
+
+[33mcommit d619e0f09800b87c159b6f0867ea5d5e5c69c444[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sat Nov 21 15:36:14 2015 +0100
+
+    re #106 add nested_attributes in user model,make method for checking ownership of group_ids
+
+[33mcommit 6500a37f1d5155e042a95766652a85e69a451006[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sat Nov 21 12:31:53 2015 +0100
+
+    re #105 account owner can create employee wit company id
+
+[33mcommit 4321cad264b33e11fb74f343331ad96b04346403[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Tue Nov 17 23:01:46 2015 +0100
+
+    create add permissions to group funcionalty
+
+[33mcommit da8e015b9627fef9d52a9721db68b7b9f153d9ba[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Tue Nov 17 23:01:24 2015 +0100
+
+    create add permissions to group funcionalty
+
+[33mcommit 721721fe7620d1881790f38e523e1187b374de24[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Tue Nov 17 20:03:41 2015 +0100
+
+    refacture group global logic,create default group on store create,add before_action on group controller,remove reusable methods under lib/reusale_methods
+
+[33mcommit 022d080cab163c8d159cc70d0275edd960a2d88f[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Thu Nov 12 08:51:27 2015 +0100
+
+    set Group resource authorization(ability)
+
+[33mcommit 63022a0557ad479b39a4ffac2c0b1fbb48a936fa[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sun Nov 8 20:44:12 2015 +0100
+
+    create before_filter on update action(store resource) to check if company_id maching with user.companies.ids
+
+[33mcommit 71976389a895ab326af976efae94df1f3d2e9466[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sun Nov 8 18:00:53 2015 +0100
+
+    set Store authorization(ability) for Accoun_owner permission
+
+[33mcommit 0b512ec559446a753c1537c7e2cbc3ee121c1dc9[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sat Nov 7 13:58:06 2015 +0100
+
+    set company autorization(ability)
+
+[33mcommit b4bf8ab4357e80272df3d18675ef5d9ac495e066[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Nov 6 20:01:27 2015 +0100
+
+    Reorganize seed files
+
+[33mcommit d90d7645792b9fb75c45c72dd57afda4968bb4c8[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 4 13:31:13 2015 +0100
+
+    set relationshiip company has many stores
+
+[33mcommit 152572506ef3c4611079a38f522b75fb4a972064[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 4 13:25:08 2015 +0100
+
+    add relationship store->users,store->groups
+
+[33mcommit 82d715b377b0cad256a049b58722021d82874931[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 4 13:06:24 2015 +0100
+
+    reorganize user->groups assosiation,cretae many_to_many assosiation user->groups
+
+[33mcommit d559ce17fd87b1c2b9a9ae828b518787e48cf173[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Wed Nov 4 11:53:23 2015 +0100
+
+    create store resource,crud funcionalty are set
+
+[33mcommit 6bc4597a1fa8073eb5e1303413adcd0dbd94c842[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sun Oct 25 23:45:02 2015 +0100
+
+    add ability roles for company authorization
+
+[33mcommit 53d3606875d0557d80ceadc9fa97b7ef1f362a69[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Thu Oct 15 11:55:28 2015 +0200
+
+    set validation for company resource
+
+[33mcommit 009ff7eb362921bd16643c345de7972eb44b0981[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sat Oct 10 10:33:51 2015 +0200
+
+    marge two seed files into one,_companies_users
+
+[33mcommit 30bcba82d2e949c223ca9569cf8b62bec26f9252[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sat Oct 10 08:57:21 2015 +0200
+
+    set relationship many to many company->users,create join table
+
+[33mcommit 91ce014e5928afa60b464a49f839a17b5ff80187[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Sat Oct 10 08:41:08 2015 +0200
+
+    remove user_id from company table,create seed file company
+
+[33mcommit 628658280457dabf2f6cacab1753ca69103d0e50[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Oct 9 13:44:45 2015 +0200
+
+    create Company CRUD actions in company_controller
+
+[33mcommit 5cd102055a8ee45725e2e0ef7ec493bbb90a8416[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Oct 9 00:11:39 2015 +0200
+
+    create company resource
+
+[33mcommit 0bfea1245d82d6e840b4ecfe2794e04eaa21d7fe[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Thu Oct 8 23:57:22 2015 +0200
+
+    setrelation ship user -> permissions througt=> groups
+
+[33mcommit 0c0cd794eda9afd3494f468c5ff8d00dc33bfa9c[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Thu Oct 8 23:39:46 2015 +0200
+
+    add groups_permissions seed file
+
+[33mcommit 34bd419912c15f766e9479e44bd1b9f67a0e17ed[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Mon Oct 5 17:12:43 2015 +0200
+
+    set relationship many_to_many group -> permission,create join table
+
+[33mcommit 47384ac7a6c8873f885d4a3dd48161350722f6d8[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Mon Oct 5 16:06:24 2015 +0200
+
+    create index action in permissions_ctrl,create seed file
+
+[33mcommit 89d27d05799828ddf683db6cd49684873af52e9d[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Mon Oct 5 14:38:23 2015 +0200
+
+    create permissions resource
+
+[33mcommit 7cfeca66591b4b44d14180321bab6fa30c8c5942[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Mon Oct 5 14:27:57 2015 +0200
+
+    set validation to users
+
+[33mcommit 31e74fe219c42700fb8060cf0169849d1e5f322e[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Mon Oct 5 14:23:04 2015 +0200
+
+    changing user json output,removing password,group_id from output
+
+[33mcommit 0fd4ade00e007c313a12c40ee7d169617fff764b[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Mon Oct 5 14:11:59 2015 +0200
+
+    set show method groups_controller
+
+[33mcommit 4b395e631ce76da07218b16ff67b755ae9830e10[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Mon Oct 5 14:06:06 2015 +0200
+
+    set relationship users->groups,add group_id column to users table
+
+[33mcommit e6ebbe40bcb0d78b8753f2c4bd8687e1fc359d74[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Oct 2 19:45:12 2015 +0200
+
+    set delete action groups controller
+
+[33mcommit 10f2973ec0782c9c783b58d3534f15573b6c29f4[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Oct 2 19:37:12 2015 +0200
+
+    set update action groups contrroler
+
+[33mcommit 5ea32a5246f6027686c4d048456ab32ab73e8e52[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Oct 2 16:44:01 2015 +0200
+
+    set create method,set validation,seed groups
+
+[33mcommit 4d50b70752bc43ead8bbda05fa5fb5d88f4bc182[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Oct 2 13:48:56 2015 +0200
+
+     create group resource
+
+[33mcommit bb543107c801c76e32fca809b4bdcabe468f8632[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Oct 2 11:38:11 2015 +0200
+
+    re#87 initialize ability class
+
+[33mcommit bbc6741efa6a3996794679d0f027d4aa3c57faa0[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Fri Oct 2 11:25:59 2015 +0200
+
+    re#86 add cancancan gem
+
+[33mcommit e70b43aaf5a1db215b0385551cf102f707c8a418[m
+Author: osman <osmanperviz@gmail.com>
+Date:   Thu Oct 1 08:58:26 2015 +0200
+
+    re #72 add and configurate CORS gem
+
+[33mcommit 2312906ccc0403eff90f3b6279789faa67a35221[m
+Author: Osman Perviz <osmanperviz@outlook.com>
+Date:   Sat Sep 26 14:59:16 2015 +0000
+
+    add username instead email as login parametar,fix route error
+
+[33mcommit ac91b5a349d1339fc4519203ef0cec53f458af35[m
+Author: Osman Perviz <osmanperviz@outlook.com>
+Date:   Sat Sep 26 14:22:38 2015 +0000
+
+    add auth_token column to users table,create login&logout methods in access_ctrl,add current_user and checking token funcionalty
+
+[33mcommit bd6b63a8c4c26ca600a53dedbf70127bb6285af0[m
+Author: Osman Perviz <osmanperviz@outlook.com>
+Date:   Sat Sep 26 13:36:30 2015 +0000
+
+    add access_ctrl responssible for login&logout funcionalty
+
+[33mcommit 5d9346fe12d52647f69ceae05b5c8f8f11f25b1e[m
+Author: Osman Perviz <osmanperviz@outlook.com>
+Date:   Sat Sep 26 13:19:44 2015 +0000
+
+    change db credentials,add user seed file
+
+[33mcommit 87dbf2c7dbff5bbc85d82628abe72feec7d93461[m
+Author: Osman Perviz <osmanperviz@outlook.com>
+Date:   Fri Sep 25 12:33:09 2015 +0000
+
+    add bcrypt gem,create crud actions for user resource,create seed file for user resource
+
+[33mcommit 43e91cb4b0cd03be341bc994192f398471c93b37[m
+Author: Osman Perviz <osmanperviz@outlook.com>
+Date:   Fri Sep 25 12:06:15 2015 +0000
+
+    change protect_from_forgery :exeption to :null_session in application_ctrl
+
+[33mcommit 8e814c84e49dc533b7b4701eb919976bc578f466[m
+Author: Osman Perviz <osmanperviz@outlook.com>
+Date:   Fri Sep 25 11:59:42 2015 +0000
+
+    create user table,add namespace folder(controllers/api)
+
+[33mcommit 3a94357d7b741d9beaeeb401a372832eb64957fe[m
+Author: Osman Perviz <osmanperviz@outlook.com>
+Date:   Fri Sep 25 11:52:44 2015 +0000
+
+    Add api namespace in routes,create User resource
+
+[33mcommit 278aad793a1f2777fb586dd7ef0fff903ff2be4b[m
+Author: vagrant <vagrant@service.manager>
+Date:   Fri Sep 25 11:16:42 2015 +0000
+
+    add gitignore file
+
+[33mcommit 15082a56a31de064ea193e7551acb5597d98be93[m
+Author: vagrant <vagrant@service.manager>
+Date:   Fri Sep 25 11:14:40 2015 +0000
+
+    Initialize app
+
+[33mcommit b802182bef52c6e8b3a0dedb49646f6dad50fdf9[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Wed Sep 23 14:25:49 2015 +0000
+
+    Updated README.md
+
+[33mcommit 3387c7b4cbb58e8feb11cd50bf0bdbee4c853a29[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Wed Sep 23 16:18:32 2015 +0200
+
+    re #83 Add serviceManager PostgreSQL database with owner service
+
+[33mcommit 16e90ce8eefcb910648ed324fa4c6e89dbd33d2a[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Wed Sep 23 11:34:41 2015 +0200
+
+    re #80 Fix problem with isntalling node
+
+[33mcommit dc9ede499313b73de5bddc1fdbef618fef1e9a95[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Wed Sep 23 11:34:08 2015 +0200
+
+    Fix problem with isntalling node
+
+[33mcommit fca093fbec84efe1a215d2113aa8abce6a074395[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Mon Sep 7 22:20:55 2015 +0000
+
+    Updated README.md
+
+[33mcommit 16afe9a1983e8e1e85fc6bbfdc91b24141076b53[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Mon Sep 7 22:19:35 2015 +0000
+
+    Updated README.md
+
+[33mcommit 899a7ad7fea6887f5c162eb09b1c0788e0e6abc0[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Sat Sep 5 17:23:48 2015 +0200
+
+    Fix end of line
+
+[33mcommit d5971b1fcf6548503a71035b2e67d5b5ac4be42f[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Sat Sep 5 16:56:47 2015 +0200
+
+    add gitattributes
+
+[33mcommit 19e5e5e5ce5ee0800834d2ba81692656bc93986c[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Thu Sep 3 07:37:29 2015 +0000
+
+    Updated README.md
+
+[33mcommit 0cb00a37e9550d5bbfcbc39a9572bcb799efc5cc[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Thu Sep 3 07:27:25 2015 +0000
+
+    Added file README.md
+
+[33mcommit dc7174ca98d4ea47b1ea26cf514ff0dd875db173[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Thu Sep 3 07:25:59 2015 +0000
+
+    Added file README.md
+
+[33mcommit 1e6e252bfb03ba01d43a415356ae9bd30deaac57[m
+Author: Adnan Mulalic <stensolino@hotmail.com>
+Date:   Thu Sep 3 07:25:36 2015 +0000
+
+    Added file README.md
+
+[33mcommit c0c70ac0dcafe7756acdf3b6c7cbf875d1048dae[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Thu Sep 3 08:56:36 2015 +0200
+
+    Add sh file for starting unicorn on every vagrant up
+
+[33mcommit 83510cd9f0f111c2d2cbf2b532898031f263fee4[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Thu Sep 3 08:53:07 2015 +0200
+
+    Add sh file for configuring nginx serviceapi and starting unicorn
+
+[33mcommit 85906973b3045fb285aa99325e8959f88b79744d[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Thu Sep 3 08:50:41 2015 +0200
+
+    Add unicron.rb config (Gem config)
+
+[33mcommit 2b958794e73f6b6fd333be4124a03687786d7755[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Thu Sep 3 08:49:51 2015 +0200
+
+    Add nginx config file for serviceapi
+
+[33mcommit eb274046354c6cc1b78620a6becb887465cd02bf[m
+Author: Adnan Mulalic <stensolino@gmail.com>
+Date:   Thu Sep 3 08:48:33 2015 +0200
+
+    Add vagrant configuration files with configured config.yaml

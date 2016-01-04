@@ -52,7 +52,7 @@ Managerno.config(function ($routeProvider, $httpProvider, $translateProvider) {
             savedProfile = JSON.parse(localStorage.getItem("profile"));
 
         if (savedProfile == undefined || savedProfile.language == undefined)
-            savedProfile = { language: "en" }
+            savedProfile = { language: "en" };
 
         return savedProfile.language;
     });
