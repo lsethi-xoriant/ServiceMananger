@@ -17,10 +17,17 @@
     LOGIN_WELCOME: "Drago nam je da Vas ponovo vidimo!",
     LOGIN_REMEMBER: "Zapamti prijavu",
     LOGIN_IF_PRIVATE_COMPUTER: "ako je ovo privatni uređaj",
+    SAVE: "Snimi",
+    CANCEL: "Otkaži",
     EMAIL: "E-mail",
     PASSWORD: "Lozinka",
+    CITY: "Grad",
+    COUNTRY: "Država",
+    NAME: "Ime",
+    LOGO_IMAGE: "Logo slika",
     BUTTON_BACK_TO_DASHBOARD: "Nazad na Dashboard",
     BUTTON_LOGIN: "Prijava",
     VALIDATION_REQUIRED: "Polje je obavezno",
-    STATUS_MESSAGE_WAIT: "Molimo sačekajte!"
+    STATUS_MESSAGE_WAIT: "Molimo sačekajte!",
+    ADD_NEW_COMPANY: "Dodaj novu kompaniju"
 }

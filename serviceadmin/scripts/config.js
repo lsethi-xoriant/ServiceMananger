@@ -10,6 +10,7 @@ if (document.location.hostname === "serviceadmin.dev") {
 
 appConfig.urlLogin = appConfig.baseUrlApi + "access/";
 appConfig.urlLogout = appConfig.baseUrlApi + "access/logout/";
+appConfig.logoLink = appConfig.baseUrl + "folder/";
 appConfig.urlNoImage = appConfig.baseUrl + "content/images/realestates/NoImage_a.jpg";
 
 appConfig.url = {};

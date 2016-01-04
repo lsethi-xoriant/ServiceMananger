@@ -13,6 +13,17 @@
                         deffered.reject(data);
                     });
                 return deffered.promise;
+            },
+            saveCompany: function (company) {
+                var deffered = $q.defer();
+                $http.post(appConfig.baseUrlApi + "companies", company)
+                    .success(function (data, status, headers, config) {
+                        deffered.resolve(data);
+                    })
+                    .error(function (data, status, headers, config) {
+                        deffered.reject(data);
+                    });
+                return deffered.promise;
             }
         }
     }
