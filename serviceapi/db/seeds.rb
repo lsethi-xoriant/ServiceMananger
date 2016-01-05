@@ -35,7 +35,7 @@ stores = [
 
 users = [
     ["user1","user1","user1@gmail.com",1,1,"en"],
-    ["user2","user2","user2@gmail.com",2,2,"de"]
+    ["user2","user2","user2@gmail.com",2,2,"bs"]
     # ["osman","osman","osman@gmail.com"],
     # ["ado pado","ado","ado_pado@gmail.com"]
 ]

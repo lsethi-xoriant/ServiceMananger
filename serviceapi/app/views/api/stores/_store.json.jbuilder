@@ -4,6 +4,7 @@ json.email @store.email
 json.city @store.city
 json.country @store.country
 json.address @store.address
+json.logoImageLink @store.logoImageLink
 json.company @store.company,:id,:name
 
 json.users do

@@ -7,7 +7,7 @@
     json.address store.address
     json.country store.country
     json.company store.company,:id,:name
-
+    json.logoImageLink store.logoImageLink
     json.users do
       json.array! store.users,:id,:first_name
     end
