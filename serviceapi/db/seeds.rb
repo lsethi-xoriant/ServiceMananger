@@ -10,8 +10,8 @@ account_package = [
 ]
 
 companies =[
-    ["Company_1","company_1@gmail.com","Amsterdam","Nederland"],
-    ["Company_2","company_2@gmail.com","Mutnik","BiH"]
+    ["Company_1","company_1@gmail.com","Amsterdam","Nederland"," De Ruijterkade 7. 1013 AA"],
+    ["Company_2","company_2@gmail.com","Mutnik","BiH","Ibrahim Perviz"]
     # ["Company_3","company_3@gmail.com","Buzim","BiH"],
     # ["Company_4","company_4@gmail.com","Buzim","BiH"]
 ]
@@ -29,8 +29,8 @@ groups = [
     # ["Company_2 store Employee ",true,"Default Employee Group for Company_2 store"]
 ]
 stores = [
-    ["company_1 store","store1@gmail.com","London","UK",1],
-    [" company_2store","store2@gmail.com","Mutnik","Bosnia",2]
+    ["company_1 store","store1@gmail.com","London","UK",1,"Houghton Street"],
+    [" company_2store","store2@gmail.com","Mutnik","Bosnia",2,"Ibrahim Perviz "]
 ]
 
 users = [
@@ -41,8 +41,8 @@ users = [
 ]
 
 
-companies.each do |name,email,city,country|
-  Company.create!({name:name,email:email,city:city,country:country})
+companies.each do |name,email,city,country,address|
+  Company.create!({name:name,email:email,city:city,country:country,address:address})
 end
 
 permissionses.each do |name,active,description|
@@ -51,8 +51,8 @@ end
 groups.each do |name,active,description|
   Group.create!({name:name,active:active,description:description})
 end
-stores.each do |name,email,city,country,company_id|
-  Store.create!({name:name,email:email,city:city,country:country,company_id:company_id})
+stores.each do |name,email,city,country,company_id,address,logoImageLink|
+  Store.create!({name:name,email:email,city:city,country:country,company_id:company_id,address:address,logoImageLink:logoImageLink})
 end
 account_package.each do |name,description|
     AccountPackage.create!({name:name,description:description})

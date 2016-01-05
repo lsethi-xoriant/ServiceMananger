@@ -6,6 +6,7 @@ class Store < ActiveRecord::Base
   accepts_nested_attributes_for :company
 
   after_create :create_default_user_group
+  before_save :check_image
 
 
   VALID_EMAIL = /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
@@ -29,6 +30,10 @@ class Store < ActiveRecord::Base
 
   def create_default_user_group
     self.groups.create(:name => "#{self.name} Employee",:description=> "Default Employee Group for #{self.name}")
+  end
+
+  def check_image
+    self.logoImageLink = NO_IMAGE_LINK unless self.logoImageLink
   end
 
 end

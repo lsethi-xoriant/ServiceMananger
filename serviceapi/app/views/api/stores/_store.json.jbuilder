@@ -3,6 +3,7 @@ json.name @store.name
 json.email @store.email
 json.city @store.city
 json.country @store.country
+json.address @store.address
 json.company @store.company,:id,:name
 
 json.users do

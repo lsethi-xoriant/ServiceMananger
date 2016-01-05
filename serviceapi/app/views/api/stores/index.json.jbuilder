@@ -4,6 +4,7 @@
     json.name store.name
     json.email store.email
     json.city store.city
+    json.address store.address
     json.country store.country
     json.company store.company,:id,:name
 

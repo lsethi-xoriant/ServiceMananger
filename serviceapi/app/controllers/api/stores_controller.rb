@@ -48,7 +48,7 @@ class Api::StoresController < ApplicationController
   private
 
   def store_params
-    params.require(:store).permit(:email,:name,:city,:country,:company_id)
+    params.require(:store).permit(:email,:name,:city,:country,:company_id,:logoImageLink,:address)
   end
 
 
