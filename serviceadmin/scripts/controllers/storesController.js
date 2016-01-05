@@ -7,7 +7,7 @@
             return;
         }
 
-        $scope.breadcrumb = currentUserServices.getBreadcrumb(breadcrumbConst.dashboard);
+        $scope.breadcrumb = currentUserServices.getBreadcrumb(breadcrumbConst.stores);
         $scope.userData = currentUserServices.getProfile();
     }
 

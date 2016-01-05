@@ -63,3 +63,40 @@ breadcrumbConst.company = [
         }
     }
 ];
+
+breadcrumbConst.stores = [
+    {
+        lang: "bs",
+        value: {
+            subject: "Trgovine",
+            message: "",
+            links: [
+                {
+                    href: "#/",
+                    name: "Dashboard"
+                },
+                {
+                    href: "#/stores",
+                    name: "Trgovine"
+                }
+            ]
+        }
+    },
+    {
+        lang: "en",
+        value: {
+            subject: "Stores",
+            message: "",
+            links: [
+                {
+                    href: "#/",
+                    name: "Dashboard"
+                },
+                {
+                    href: "#/stores",
+                    name: "Stores"
+                }
+            ]
+        }
+    }
+];
