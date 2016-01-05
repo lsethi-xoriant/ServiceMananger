@@ -3,4 +3,44 @@
 
 <div id="wrapper">
     <div id="breadcrumb" ng-include="'views/common/breadcrumb.html'"></div>
+
+    <div class="content" animate-panel effect="zoomIn">
+        <div class="row">
+            <div ng-repeat="store in stores">
+                <div class="col-lg-6">
+                    <div class="hpanel hgreen contact-panel">
+                        <div class="panel-body">
+                            <span class="label label-success pull-right">NEW</span>
+                            <a href="{{ url.stores + store.id }}">
+                                <img alt="logo" class="m-b" ng-src="{{ store.logoImageLink }}">
+                            </a>
+                            <h3>
+                                <a href="{{ url.stores + store.id }}">{{ store.name }}</a>
+                            </h3>
+                            <div class="text-muted font-bold m-b-xs">{{ store.address }}, {{ store.city }}</div>
+                        </div>
+                        <div class="panel-footer contact-footer">
+                            <div class="row">
+                                <div class="col-sm-4 border-right">
+                                    <div class="contact-stat">
+                                        <span>{{ 'WORKING_ORDERS' | translate }}: </span> <strong>{{ company.stores.length }}</strong>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 border-right">
+                                    <div class="contact-stat">
+                                        <span>{{ 'GROUPS' | translate }}: </span> <strong>{{ store.groups.length }}</strong>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 border-right">
+                                    <div class="contact-stat">
+                                        <span>{{ 'EMPLOYEE' | translate }}: </span> <strong>{{ store.users.length }}</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

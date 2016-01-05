@@ -29,5 +29,7 @@
     BUTTON_LOGIN: "Prijava",
     VALIDATION_REQUIRED: "Polje je obavezno",
     STATUS_MESSAGE_WAIT: "Molimo sačekajte!",
-    ADD_NEW_COMPANY: "Dodaj novu kompaniju"
+    ADD_NEW_COMPANY: "Dodaj novu kompaniju",
+    WORKING_ORDERS:"Radni Nalozi",
+    EMPLOYEE:"Zaposlenici"
 }

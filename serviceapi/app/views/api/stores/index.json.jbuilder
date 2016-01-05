@@ -1,4 +1,4 @@
-json.stores do
+
   json.array! @stores do |store|
     json.id store.id
     json.name store.name
@@ -14,4 +14,3 @@ json.stores do
       json.array! store.groups,:id,:name
     end
   end
-end
