@@ -3,13 +3,13 @@
 
     function storesService($q, $http){
         return {
-            getStores: function(){
+            getStores: function(id){
                 var deffered = $q.defer();
-                $http.get(appConfig.baseUrlApi + 'stores')
+                $http.get(appConfig.baseUrlApi + 'companies/' + id )
                     .success(function(data, status, headers, config){
                         deffered.resolve(data)
                     })
-                    .error(function(){
+                    .error(function(data){
                         deffered.reject(data)
                     });
                 return deffered.promise;

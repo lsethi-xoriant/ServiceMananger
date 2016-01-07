@@ -26,12 +26,12 @@
         $scope.addCompanyFromForm = function () {
             $("#addCompanyForm").slideDown();
             $("#topMenu").slideUp();
-        }
+        };
 
         $scope.closeAddCompanyFromForm = function () {
             $("#addCompanyForm").slideUp();
             $("#topMenu").slideDown();
-        }
+        };
 
         $scope.saveCompanyFromForm = function (formValid) {
             if ($scope.company.id === undefined) {
@@ -39,7 +39,7 @@
             } else {
                 $scope.updateCompany();
             }
-        }
+        };
 
         $scope.saveCompany = function () {
             companyService.saveCompany($scope.company).then(
@@ -49,11 +49,11 @@
                 function () {
 
                 });
-        }
+        };
 
         $scope.updateCompany = function () {
 
-        }
+        };
     }
 
     managernoControllers.controller("companyController", companyController);

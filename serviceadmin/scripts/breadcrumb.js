@@ -76,6 +76,10 @@ breadcrumbConst.stores = [
                     name: "Dashboard"
                 },
                 {
+                    href: "#/company",
+                    name: "Kompanija"
+                },
+                {
                     href: "#/stores",
                     name: "Trgovine"
                 }
@@ -91,6 +95,10 @@ breadcrumbConst.stores = [
                 {
                     href: "#/",
                     name: "Dashboard"
+                },
+                {
+                    href: "#/company",
+                    name: "Company"
                 },
                 {
                     href: "#/stores",
