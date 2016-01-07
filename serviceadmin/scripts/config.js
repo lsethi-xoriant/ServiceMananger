@@ -14,6 +14,6 @@ appConfig.urlNoImage = appConfig.baseUrl + "content/images/realestates/NoImage_a
 
 appConfig.url = {};
 appConfig.url.companies = "/#/companies/";
-appConfig.url.stores = "/#/stores/";
+appConfig.url.stores = "/stores/";
 
 appConfig.languageDefaul = "en";

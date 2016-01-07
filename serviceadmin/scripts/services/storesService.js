@@ -13,6 +13,17 @@
                         deffered.reject(data)
                     });
                 return deffered.promise;
+            },
+            saveStore: function(store){
+                var deffered = $q.defer();
+                $http.post(appConfig.baseUrlApi + 'stores',store)
+                    .success(function(data, status, headers, config){
+                        deffered.resolve(data)
+                    })
+                    .error(function(data){
+                        deffered.reject(data)
+                    });
+                return deffered.promise;
             }
         }
 

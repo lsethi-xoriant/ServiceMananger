@@ -19,7 +19,7 @@
 
     <div class="row" id="addStoreForm" style="display: none">
         <div class="col-md-12">
-            <form class="form-horizontal" novalidate>
+            <form class="form-horizontal" name="storeForm" novalidate>
                 <div class="hpanel hgreen">
                     <div class="panel-heading">
                         <div class="panel-tools">
@@ -32,31 +32,44 @@
                         <img src="../images/loading-bars.svg" width="25" /> {{ 'STATUS_MESSAGE_WAIT' | translate }}-->
                         <div class="row" style="padding-top: 15px">
                             <div class="col-lg-6">
-                                <div class="form-group">
+                                <div class="form-group" ng-class="{ 'has-error' : storeForm.email.$invalid && !storeForm.email.$pristine }">
                                     <label class="col-sm-2 control-label">{{ 'EMAIL' | translate }}</label>
                                     <div class="col-sm-10">
-                                        <input type="text" ng-model="store.email" class="form-control">
+                                        <input type="text" name="email" ng-model="store.email" class="form-control" required>
+                                        <!--<p ng-show="storeForm.email.$invalid && !storeForm.email.$pristine" class="help-block">{{'ENTER_VALID_EMAIL' | translate}}</p>-->
+                                        <p ng-show="storeForm.email.$invalid && !storeForm.email.$pristine" class="help-block">{{'EMAIL_REQUIRED' | translate}}.</p>
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
-                                <div class="form-group">
+                                <div class="form-group" ng-class="{ 'has-error' : storeForm.name.$invalid && !storeForm.name.$pristine }" >
                                     <label class="col-sm-2 control-label">{{ 'NAME' | translate }}</label>
                                     <div class="col-sm-10">
-                                        <input type="text" ng-model="store.name" class="form-control">
+                                        <input type="text" ng-model="store.name" class="form-control" name="name" required>
+                                        <p ng-show="storeForm.name.$invalid && !storeForm.name.$pristine" class="help-block">{{'NAME_REQUIRED' | translate}}.</p>
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
-                                <div class="form-group">
+                                <div class="form-group" ng-class="{ 'has-error' : storeForm.city.$invalid && !storeForm.city.$pristine }">
                                     <label class="col-sm-2 control-label">{{ 'CITY' | translate }}</label>
                                     <div class="col-sm-10">
-                                        <input type="password" ng-model="store.city" class="form-control" name="password">
+                                        <input type="text" ng-model="store.city" class="form-control" name="city" required>
+                                        <p ng-show="storeForm.city.$invalid && !storeForm.city.$pristine" class="help-block">{{'CITY_REQUIRED' | translate}}.</p>
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
-                                <div class="form-group">
+                                <div class="form-group" ng-class="{ 'has-error' : storeForm.country.$invalid && !storeForm.country.$pristine }">
                                     <label class="col-sm-2 control-label">{{ 'COUNTRY' | translate }}</label>
                                     <div class="col-sm-10">
-                                        <input type="text" ng-model="store.country" class="form-control">
+                                        <input type="text" ng-model="store.country" name="country" class="form-control" required="">
+                                        <p ng-show="storeForm.country.$invalid && !storeForm.country.$pristine" class="help-block">{{'COUNTRY_REQUIRED' | translate}}.</p>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group" ng-class="{ 'has-error' : storeForm.address.$invalid && !storeForm.address.$pristine }">
+                                    <label class="col-sm-2 control-label">{{ 'ADDRESS' | translate }}</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="address" ng-model="store.address" class="form-control" required="">
+                                        <p ng-show="storeForm.address.$invalid && !storeForm.address.$pristine" class="help-block">{{'ADDRESS_REQUIRED' | translate}}.</p>
                                     </div>
                                 </div>
                             </div>
@@ -72,9 +85,9 @@
                         </div>
                     </div>
                     <div class="panel-footer">
-                        <button ng-click="closeAddCompanyFromForm()" class="btn btn-default" type="submit">{{ 'CANCEL' | translate }}</button>
-                        <button ng-click="saveCompanyFromForm()" class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>
-                            <span>
+                        <button ng-click="closeAddStoreFromForm(storeForm.$valid)" class="btn btn-default" type="submit">{{ 'CANCEL' | translate }}</button>
+                        <button ng-click="saveStoreFromForm(store)" ng-disabled="storeForm.$invalid" class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>
+                            <span ng-show="savingStatus == constants.spinnerStatus.saving">
                                 <img src="../images/loading-bars.svg" width="25" /> {{ 'STATUS_MESSAGE_WAIT' | translate }}
                             </span>
                     </div>
@@ -94,7 +107,7 @@
                                 <img alt="logo" class="m-b" ng-src="{{ store.logoImageLink }}">
                             </a>
                             <h3>
-                                <a href="{{ url.stores + store.id }}">{{ store.name }}</a>
+                                <a href="{{url.companies + company.id  + url.stores + store.id}}">{{ store.name }}</a>
                             </h3>
                             <div class="text-muted font-bold m-b-xs">{{ store.address }}, {{ store.city }}</div>
                         </div>

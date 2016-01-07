@@ -39,7 +39,7 @@
             } else {
                 $scope.updateCompany();
             }
-        };
+        }
 
         $scope.saveCompany = function () {
             companyService.saveCompany($scope.company).then(
@@ -49,11 +49,11 @@
                 function () {
 
                 });
-        };
+        }
 
         $scope.updateCompany = function () {
 
-        };
+        }
     }
 
     managernoControllers.controller("companyController", companyController);
