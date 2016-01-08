@@ -16,7 +16,7 @@
             },
             saveStore: function(store){
                 var deffered = $q.defer();
-                $http.post(appConfig.baseUrlApi + 'stores',store)
+                $http.post(appConfig.baseUrlApi + 'stores',{store:store})
                     .success(function(data, status, headers, config){
                         deffered.resolve(data)
                     })

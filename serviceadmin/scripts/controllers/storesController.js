@@ -40,12 +40,8 @@
         $scope.saveStoreFromForm = function (formValid) {
             $scope.savingStatus = constants.spinnerStatus.saving;
             if(formValid){
-                if ($scope.store.id === undefined) {
-                    saveStore();
-                } else {
-                    $scope.updateCompany();
-                }
-            };
+                saveStore();
+            }
         };
 
         function saveStore () {
