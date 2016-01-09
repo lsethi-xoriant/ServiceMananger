@@ -32,10 +32,7 @@
         };
 
         $scope.closeAddStoreFromForm = function () {
-            $scope.storeForm.$setPristine();
-            $scope.store={};
-            $("#addStoreForm").slideUp();
-            $("#topMenu").slideDown();
+            resetStoreForm();
         };
 
         $scope.saveStoreFromForm = function (formValid) {
@@ -51,10 +48,7 @@
                 function (data) {
                     $scope.company.stores.push(data);
                     $scope.savingStatus = constants.spinnerStatus.success;
-                    $scope.storeForm.$setPristine();
-                    $scope.store={};
-                    $("#addStoreForm").slideUp();
-                    $("#topMenu").slideDown();
+                    resetStoreForm();
                 },
                 function (reason) {
                     angular.forEach(reason,function(errors, field){
@@ -64,6 +58,13 @@
                     $scope.savingStatus = constants.spinnerStatus.error;
                 }
             );
+        }
+
+        function resetStoreForm(){
+            $scope.storeForm.$setPristine();
+            $scope.store={};
+            $("#addStoreForm").slideUp();
+            $("#topMenu").slideDown();
         }
 
 
