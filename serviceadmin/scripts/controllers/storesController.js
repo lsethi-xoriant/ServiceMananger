@@ -10,11 +10,11 @@
         $scope.breadcrumb = currentUserServices.getBreadcrumb(breadcrumbConst.stores);
         $scope.userData = currentUserServices.getProfile();
         $scope.savingStatus = constants.spinnerStatus.start;
-        $scope.url = appConfig.url;
         $scope.countries_list = countries_list;
+        $scope.url = appConfig.url;
+        $scope.serverErrors = {};
         $scope.company = [];
         $scope.store = {};
-        $scope.serverErrors = {};
 
 
         storesService.getStores($routeParams.id).then(
@@ -32,10 +32,10 @@
         };
 
         $scope.closeAddStoreFromForm = function () {
-            $("#addStoreForm").slideUp();
-            $("#topMenu").slideDown();
             $scope.storeForm.$setPristine();
             $scope.store={};
+            $("#addStoreForm").slideUp();
+            $("#topMenu").slideDown();
         };
 
         $scope.saveStoreFromForm = function (formValid) {
@@ -51,6 +51,8 @@
                 function (data) {
                     $scope.company.stores.push(data);
                     $scope.savingStatus = constants.spinnerStatus.success;
+                    $scope.storeForm.$setPristine();
+                    $scope.store={};
                     $("#addStoreForm").slideUp();
                     $("#topMenu").slideDown();
                 },
