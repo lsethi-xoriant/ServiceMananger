@@ -32,6 +32,7 @@
     CITY_REQUIRED:"Grad je potreban",
     ADDRESS_REQUIRED:"Adresa je potrebna.",
     COUNTRY_REQUIRED:"Drzava je potrebna",
+    SELECT_COUNTRY:"Odaberite drzavu",
     BUTTON_BACK_TO_DASHBOARD: "Nazad na Dashboard",
     BUTTON_LOGIN: "Prijava",
     VALIDATION_REQUIRED: "Polje je obavezno",

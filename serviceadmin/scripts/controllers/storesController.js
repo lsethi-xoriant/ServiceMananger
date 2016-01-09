@@ -11,6 +11,7 @@
         $scope.userData = currentUserServices.getProfile();
         $scope.savingStatus = constants.spinnerStatus.start;
         $scope.url = appConfig.url;
+        $scope.countries_list = countries_list;
         $scope.company = [];
         $scope.store = {};
         $scope.serverErrors = {};

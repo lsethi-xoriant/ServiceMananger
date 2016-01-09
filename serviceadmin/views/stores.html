@@ -61,8 +61,11 @@
                                 <div class="form-group" ng-class="{ 'has-error' : storeForm.country.$invalid && !storeForm.country.$pristine }">
                                     <label class="col-sm-2 control-label">{{ 'COUNTRY' | translate }}</label>
                                     <div class="col-sm-10">
-                                        <input type="text" ng-model="store.country" name="country" class="form-control" required="">
-                                        <p ng-show="storeForm.country.$invalid && !storeForm.country.$pristine" class="help-block">{{'COUNTRY_REQUIRED' | translate}}.</p>
+                                        <!--<input type="text" ng-model="store.country" name="country" class="form-control" required="">-->
+                                        <!--<p ng-show="storeForm.country.$invalid && !storeForm.country.$pristine" class="help-block">{{'COUNTRY_REQUIRED' | translate}}.</p>-->
+                                    <select ng-model="store.country" ng-options="country.name as country.name for country in countries_list" class="form-control">
+                                        <option value="">{{'SELECT_COUNTRY' | translate}}</option>
+                                    </select>
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
