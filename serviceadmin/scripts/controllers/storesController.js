@@ -65,6 +65,8 @@
             $scope.store={};
             $("#addStoreForm").slideUp();
             $("#topMenu").slideDown();
+            $("#my-image-to-object").attr('src','').removeAttr('style','width:300px;');
+            $('input[my-image-to-object]').val(null);
         }
 
 
