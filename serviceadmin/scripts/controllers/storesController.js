@@ -1,7 +1,7 @@
 (function(){
     "use strict";
 
-    function storesController($scope, $http, $location, currentUserServices,storesService,$routeParams){
+    function storesController($scope,$location,currentUserServices,storesService,$routeParams){
         if (!currentUserServices.loggedIn()) {
             $location.path("/login");
             return;
@@ -12,10 +12,11 @@
         $scope.savingStatus = constants.spinnerStatus.start;
         $scope.url = appConfig.url;
         $scope.company = [];
-        $scope.store={};
-        var id = $routeParams.id;
+        $scope.store = {};
+        $scope.serverErrors = {};
 
-        storesService.getStores(id).then(
+
+        storesService.getStores($routeParams.id).then(
             function(data){
                 $scope.company = data;
             },
@@ -29,12 +30,11 @@
             $("#topMenu").slideUp();
         };
 
-        $scope.closeAddStoreFromForm = function (formModel) {
+        $scope.closeAddStoreFromForm = function () {
             $("#addStoreForm").slideUp();
             $("#topMenu").slideDown();
             $scope.storeForm.$setPristine();
             $scope.store={};
-
         };
 
         $scope.saveStoreFromForm = function (formValid) {
@@ -53,7 +53,11 @@
                     $("#addStoreForm").slideUp();
                     $("#topMenu").slideDown();
                 },
-                function () {
+                function (reason) {
+                    angular.forEach(reason,function(errors, field){
+                        $scope.storeForm[field].$setValidity('server', false);
+                        $scope.serverErrors[field] = errors.join(', ');
+                    });
                     $scope.savingStatus = constants.spinnerStatus.error;
                 }
             );

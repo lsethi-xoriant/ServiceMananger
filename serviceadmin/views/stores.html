@@ -35,9 +35,10 @@
                                 <div class="form-group" ng-class="{ 'has-error' : storeForm.email.$invalid && !storeForm.email.$pristine }">
                                     <label class="col-sm-2 control-label">{{ 'EMAIL' | translate }}</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="email" ng-model="store.email" class="form-control" required>
+                                        <input type="text" name="email" ng-model="store.email" class="form-control"  my-server-messages required>
                                         <!--<p ng-show="storeForm.email.$invalid && !storeForm.email.$pristine" class="help-block">{{'ENTER_VALID_EMAIL' | translate}}</p>-->
-                                        <p ng-show="storeForm.email.$invalid && !storeForm.email.$pristine" class="help-block">{{'EMAIL_REQUIRED' | translate}}.</p>
+                                        <p ng-show="storeForm.email.$error.required && !storeForm.email.$pristine" class="help-block">{{'EMAIL_REQUIRED' | translate}}.</p>
+                                         <p ng-show="storeForm.email.$error.server && !storeForm.email.$pristine" class="help-block">Email {{ serverErrors.email}}</p>
                                     </div>
                                 </div>
                                 <div class="hr-line-dashed"></div>
@@ -107,9 +108,9 @@
                                 <img alt="logo" class="m-b" ng-src="{{ store.logoImageLink }}">
                             </a>
                             <h3>
-                                <a href="{{url.companies + company.id  + url.stores + store.id}}">{{ store.name }}</a>
+                                <a href="{{url.companies + company.id  + url.stores + store.id}}">{{ store.name  }}</a>
                             </h3>
-                            <div class="text-muted font-bold m-b-xs">{{ store.address }}, {{ store.city }}</div>
+                            <div class="text-muted font-bold m-b-xs">{{ store.address  }}, {{ store.city }}</div>
                         </div>
                         <div class="panel-footer contact-footer">
                             <div class="row">

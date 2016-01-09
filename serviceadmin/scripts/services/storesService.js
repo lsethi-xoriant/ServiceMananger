@@ -1,6 +1,5 @@
 (function(){
     "use strict";
-
     function storesService($q, $http){
         return {
             getStores: function(id){
@@ -26,8 +25,6 @@
                 return deffered.promise;
             }
         }
-
     }
-
     managernoServices.service('storesService',storesService);
 })();
