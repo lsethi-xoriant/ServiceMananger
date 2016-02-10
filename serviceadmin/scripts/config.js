@@ -1,11 +1,18 @@
 var appConfig = {};
-if (document.location.hostname === "serviceadmin.dev") {
-    appConfig.baseUrl = "http://serviceapi.dev/";
-    appConfig.baseUrlApi = appConfig.baseUrl + "api/";
-} else {
-    appConfig.baseUrl = "http://managerno.com/";
-    appConfig.baseUrlApi = appConfig.baseUrl + "api/";
+
+switch(document.location.hostname){
+    case "serviceadmin.dev":
+        appConfig.baseUrl = "http://serviceapi.dev/";
+        break;
+    case "managerno.com":
+        appConfig.baseUrl = "http://managerno.com/";
+        break;
+    case "localhost":
+        appConfig.baseUrl = "http://127.0.0.1:3000/";
+        break;
 }
+
+appConfig.baseUrlApi = appConfig.baseUrl + "api/";
 
 appConfig.urlLogin = appConfig.baseUrlApi + "access/";
 appConfig.urlLogout = appConfig.baseUrlApi + "access/logout/";
