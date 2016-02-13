@@ -2,3 +2,9 @@
     color: #62cb31;
     text-align: center;
 }
+
+.contact-panel img{
+    height: auto;
+    width: auto;
+    max-width: 250px;
+}
