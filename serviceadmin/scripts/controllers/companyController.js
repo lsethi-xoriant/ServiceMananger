@@ -38,6 +38,10 @@
         };
 
         $scope.saveCompanyFromForm = function (formValid) {
+            if (formValid) {
+                alert('our form is amazing');
+            }
+
             if ($scope.company.id === undefined) {
                 $scope.saveCompany();
             } else {

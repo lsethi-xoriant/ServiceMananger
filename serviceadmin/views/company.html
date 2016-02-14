@@ -19,7 +19,7 @@
 
         <div class="row" id="addCompanyForm" style="display: none">
             <div class="col-md-12">
-                <form class="form-horizontal" novalidate>
+                <form name="addCompanyForm" ng-submit="saveCompanyFromForm(addCompanyForm.$valid)" class="form-horizontal" novalidate>
                     <div class="hpanel hgreen">
                         <div class="panel-heading">
                             <div class="panel-tools">
@@ -35,14 +35,20 @@
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">{{ 'EMAIL' | translate }}</label>
                                         <div class="col-sm-10">
-                                            <input type="text" ng-model="company.email" class="form-control">
+                                            <input type="email" name="email" ng-model="company.email" class="form-control">
+                                            <p ng-show="addCompanyForm.email.$invalid && !addCompanyForm.email.$pristine" class="help-block error-message">
+                                                {{ 'VALIDATION_EMAIL_FORMAT' | translate }}
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">{{ 'NAME' | translate }}</label>
+                                        <label class="col-sm-2 control-label">{{ 'NAME' | translate }}<span class="error">*</span></label>
                                         <div class="col-sm-10">
-                                            <input type="text" ng-model="company.name" class="form-control">
+                                            <input type="text" name="companyName" ng-model="company.name" class="form-control" required>
+                                            <p ng-show="addCompanyForm.companyName.$invalid && !addCompanyForm.companyName.$pristine" class="help-block error-message">
+                                                {{ 'VALIDATION_REQUIRED' | translate }}
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
@@ -83,8 +89,13 @@
                             </div>
                         </div>
                         <div class="panel-footer">
-                            <button ng-click="closeAddCompanyFromForm()" class="btn btn-default" type="submit">{{ 'CANCEL' | translate }}</button>
-                            <button ng-click="saveCompanyFromForm()" class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>
+                            <button ng-click="closeAddCompanyFromForm()" class="btn btn-default">{{ 'CANCEL' | translate }}</button>
+                            <!--<button ng-disabled="addCompanyForm.$invalid" class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>-->
+                            <button class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>
+
+                            <span ng-show="addCompanyForm.$invalid" class="info-message">
+                                <i class="fa fa-info-circle"></i> {{ 'STATUS_MESSAGE_INFO_ALL_FIELDS' | translate }}
+                            </span>
 
                             <span ng-show="savingCompanyStatus == spinnerStatus.saving">
                                 <img src="../images/loading-bars.svg" width="25" /> {{ 'STATUS_MESSAGE_WAIT' | translate }}
