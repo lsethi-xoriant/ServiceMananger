@@ -13,7 +13,9 @@
         $scope.companies = [];
         $scope.company = {};
         $scope.company.logoImageLink = "";
-        $scope.company.name = "osman";
+        $scope.spinnerStatus = constants.spinnerStatus;
+        $scope.savingCompanyStatus = $scope.spinnerStatus.start;
+
 
         companyService.getCompanies().then(
             function (data) {
@@ -39,21 +41,22 @@
             } else {
                 $scope.updateCompany();
             }
-        }
+        };
 
         $scope.saveCompany = function () {
+            $scope.savingCompanyStatus = $scope.spinnerStatus.saving;
             companyService.saveCompany($scope.company).then(
                 function (data) {
-
+                    $scope.savingCompanyStatus = $scope.spinnerStatus.success;
                 },
                 function () {
-
+                    $scope.savingCompanyStatus = $scope.spinnerStatus.error;
                 });
-        }
+        };
 
         $scope.updateCompany = function () {
 
-        }
+        };
     }
 
     managernoControllers.controller("companyController", companyController);

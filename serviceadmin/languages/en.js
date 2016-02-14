@@ -37,6 +37,8 @@
     BUTTON_LOGIN: "Login",
     VALIDATION_REQUIRED: "This field is required",
     STATUS_MESSAGE_WAIT: "Please wait!",
+    STATUS_MESSAGE_SAVING_SUCCESS: "Success.",
+    STATUS_MESSAGE_SAVING_ERROR: "Some error occurred!",
     ADD_NEW_COMPANY: "Add new company",
     ADD_NEW_STORE:"Add new store",
     WORKING_ORDERS:"Working Orders",

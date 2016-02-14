@@ -8,3 +8,13 @@
     width: auto;
     max-width: 250px;
 }
+
+.success-message {
+    margin-left: 5px;
+    color: #74d348;
+}
+
+.error-message {
+    margin-left: 5px;
+    color: #ff0000;
+}

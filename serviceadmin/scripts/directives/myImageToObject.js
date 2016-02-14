@@ -3,6 +3,7 @@
 
     function myImageToObject() {
         return {
+            restrict:'A',
             link: function (scope, element, attrs) {
                 element.bind("change", function () {
                     scope.$apply(function () {

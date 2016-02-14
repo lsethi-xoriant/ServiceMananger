@@ -37,6 +37,8 @@
     BUTTON_LOGIN: "Prijava",
     VALIDATION_REQUIRED: "Polje je obavezno",
     STATUS_MESSAGE_WAIT: "Molimo sačekajte!",
+    STATUS_MESSAGE_SAVING_SUCCESS: "Uspjesno snimljeno.",
+    STATUS_MESSAGE_SAVING_ERROR: "Desila se greska!",
     ADD_NEW_COMPANY: "Dodaj novu kompaniju",
     ADD_NEW_STORE: "Dodaj novu trgovinu",
     WORKING_ORDERS:"Radni Nalozi",
