@@ -26,6 +26,7 @@
             });
 
         $scope.addCompanyFromForm = function () {
+            $scope.resetAddCompanyForm();
             $("#addCompanyForm").slideDown();
             $("#topMenu").slideUp();
         };
@@ -33,6 +34,7 @@
         $scope.closeAddCompanyFromForm = function () {
             $("#addCompanyForm").slideUp();
             $("#topMenu").slideDown();
+            $scope.resetAddCompanyForm();
         };
 
         $scope.saveCompanyFromForm = function (formValid) {
@@ -46,8 +48,13 @@
         $scope.saveCompany = function () {
             $scope.savingCompanyStatus = $scope.spinnerStatus.saving;
             companyService.saveCompany($scope.company).then(
-                function (data) {
+                function () {
                     $scope.savingCompanyStatus = $scope.spinnerStatus.success;
+                    setTimeout(function(){
+                        $("#addCompanyForm").slideUp();
+                        $("#topMenu").slideDown();
+                        $scope.resetAddCompanyForm();
+                    }, 1000)
                 },
                 function () {
                     $scope.savingCompanyStatus = $scope.spinnerStatus.error;
@@ -56,6 +63,13 @@
 
         $scope.updateCompany = function () {
 
+        };
+
+        $scope.resetAddCompanyForm = function () {
+            $scope.company = {};
+            $scope.company.logoImageLink = "";
+            $("#companyLogoImagePreview").attr("src", "");
+            $scope.savingCompanyStatus = $scope.spinnerStatus.start;
         };
     }
 
