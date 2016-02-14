@@ -3,19 +3,16 @@
 
     function myImageToObject() {
         return {
-            link: function (scope, element, attrs, ngModel) {
+            link: function (scope, element, attrs) {
                 element.bind("change", function () {
                     scope.$apply(function () {
                         if (element[0].files) {
                             var currentObject = scope.$eval(attrs.currentObject);
-                            //currentObject.logoImage = currentObject.name.replace(/\s/g, "") + "-" + attrs.currentObject + "Logo.jpg";
+                            var showImageInHtmlTagWithId = attrs.showImageIn;
                             var reader = new FileReader();
 
                             reader.onload = function (e) {
-                                $('#my-image-to-object')
-                                    .attr('src', e.target.result)
-                                    .width(300);
-
+                                document.getElementById(showImageInHtmlTagWithId).setAttribute("src", e.target.result);
                                 currentObject.logoImageLink = e.target.result;
                             };
 

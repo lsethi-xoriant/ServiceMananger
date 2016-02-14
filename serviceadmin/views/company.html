@@ -64,8 +64,12 @@
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">{{ 'LOGO_IMAGE' | translate }}</label>
                                         <div class="col-sm-9">
-                                            <input type="file" class="form-control" my-image-to-object current-object="company">
-                                            <img src="" id="my-image-to-object" class="img-thumbnail" style="margin-top: 20px" />
+                                            <input type="file"
+                                                   class="form-control"
+                                                   my-image-to-object
+                                                   data-current-object="company"
+                                                   data-show-image-in="companyLogoImagePreview">
+                                            <img src="" id="companyLogoImagePreview" class="img-thumbnail" style="margin-top: 20px" />
                                         </div>
                                     </div>
                                     </div>
@@ -74,8 +78,15 @@
                         <div class="panel-footer">
                             <button ng-click="closeAddCompanyFromForm()" class="btn btn-default" type="submit">{{ 'CANCEL' | translate }}</button>
                             <button ng-click="saveCompanyFromForm()" class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>
-                            <span>
+
+                            <span ng-show="savingCompanyStatus == spinnerStatus.saving">
                                 <img src="../images/loading-bars.svg" width="25" /> {{ 'STATUS_MESSAGE_WAIT' | translate }}
+                            </span>
+                            <span ng-show="savingCompanyStatus == spinnerStatus.success" class="success-message">
+                                <i class="fa fa-check"></i> {{ 'STATUS_MESSAGE_SAVING_SUCCESS' | translate }}
+                            </span>
+                            <span ng-show="savingCompanyStatus == spinnerStatus.error" class="error-message">
+                                 <i class="fa fa-times"></i> {{ 'STATUS_MESSAGE_SAVING_ERROR' | translate }}
                             </span>
                         </div>
                     </div>
