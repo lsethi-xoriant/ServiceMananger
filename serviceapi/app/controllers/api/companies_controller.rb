@@ -1,9 +1,7 @@
 class Api::CompaniesController < ApplicationController
   respond_to :json
 
-  load_and_authorize_resource except: :validation_name
-  skip_authorization_check :only => [:validation_name]
-  skip_before_action :restrict_access,:set_locale ,only: :validation_name
+  load_and_authorize_resource
 
   def index
     @companies = Company.accessible_by(current_ability)
@@ -46,7 +44,7 @@ class Api::CompaniesController < ApplicationController
   # Check if company exist with name
   # Response: true if valid, false if invalid
   def validation_name
-    @company = Company.where(:name => params[:name]).first
+    @company = Company.accessible_by(current_ability).where(:name => params[:name]).first
 
     if @company
       render json: false
