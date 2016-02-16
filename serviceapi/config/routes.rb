@@ -16,5 +16,7 @@ Rails.application.routes.draw do
    resources :account_packages,only:[:index]
    resources :registration,only:[:create]
    resources :image,only:[:create]
+
+   get 'validation/company/name/:name', to: 'companies#validation_name'
  end
 end

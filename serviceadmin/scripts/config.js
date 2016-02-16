@@ -23,4 +23,8 @@ appConfig.url = {};
 appConfig.url.companies = "/#/companies/";
 appConfig.url.stores = "/stores/";
 
+//Validator Url
+appConfig.urlValidator = {};
+appConfig.urlValidator.companyName = appConfig.baseUrlApi + "validation/company/name/";
+
 appConfig.languageDefaul = "en";

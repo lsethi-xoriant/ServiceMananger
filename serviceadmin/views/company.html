@@ -32,37 +32,49 @@
                             <img src="../images/loading-bars.svg" width="25" /> {{ 'STATUS_MESSAGE_WAIT' | translate }}-->
                             <div class="row" style="padding-top: 15px">
                                 <div class="col-lg-6">
-                                    <div class="form-group">
+                                    <div class="form-group" ng-class="{ 'has-error' : addCompanyForm.email.$invalid && !addCompanyForm.email.$pristine }">
                                         <label class="col-sm-2 control-label">{{ 'EMAIL' | translate }}</label>
                                         <div class="col-sm-10">
-                                            <input type="email" name="email" ng-model="company.email" class="form-control">
-                                            <p ng-show="addCompanyForm.email.$invalid && !addCompanyForm.email.$pristine" class="help-block error-message">
+                                            <input type="email" name="email" ng-model="company.email" ng-model-options="{ debounce: 500 }" class="form-control" required>
+                                            <p ng-show="addCompanyForm.email.$invalid && !addCompanyForm.email.$pristine" class="help-block">
                                                 {{ 'VALIDATION_EMAIL_FORMAT' | translate }}
                                             </p>
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
-                                    <div class="form-group">
+                                    <div class="form-group" ng-class="{ 'has-error' : addCompanyForm.companyName.$invalid && !addCompanyForm.companyName.$pristine }">
                                         <label class="col-sm-2 control-label">{{ 'NAME' | translate }}<span class="error">*</span></label>
                                         <div class="col-sm-10">
-                                            <input type="text" name="companyName" ng-model="company.name" class="form-control" required>
-                                            <p ng-show="addCompanyForm.companyName.$invalid && !addCompanyForm.companyName.$pristine" class="help-block error-message">
+                                            <input type="text" name="companyName" ng-model="company.name" ng-model-options="{ debounce: 1000 }" my-validator-company-name class="form-control" required>
+                                            <p ng-show="addCompanyForm.companyName.$invalid && !addCompanyForm.companyName.$pristine && addCompanyForm.companyName.$error.required" class="help-block error-message">
+                                                {{ 'VALIDATION_REQUIRED' | translate }}
+                                            </p>
+                                            <p ng-show="addCompanyForm.companyName.$pending" class="help-block success-message">
+                                                <img src="../images/loading-bars.svg" width="25" /> {{ 'VALIDATION_CHECKING' | translate }}
+                                            </p>
+                                            <p ng-show="addCompanyForm.companyName.$error.companyName" class="help-block error-message">
+                                                {{ 'VALIDATION_ALREADY_EXIST' | translate }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group" ng-class="{ 'has-error' : addCompanyForm.city.$invalid && !addCompanyForm.city.$pristine }">
+                                        <label class="col-sm-2 control-label">{{ 'CITY' | translate }}</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="city" ng-model="company.city" class="form-control" required>
+                                            <p ng-show="addCompanyForm.city.$invalid && !addCompanyForm.city.$pristine" class="help-block">
                                                 {{ 'VALIDATION_REQUIRED' | translate }}
                                             </p>
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">{{ 'CITY' | translate }}</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" ng-model="company.city" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-                                    <div class="form-group">
+                                    <div class="form-group" ng-class="{ 'has-error' : addCompanyForm.country.$invalid && !addCompanyForm.country.$pristine }">
                                         <label class="col-sm-2 control-label">{{ 'COUNTRY' | translate }}</label>
                                         <div class="col-sm-10">
-                                            <input type="text" ng-model="company.country" class="form-control">
+                                            <input type="text" name="country" ng-model="company.country" class="form-control" required>
+                                            <p ng-show="addCompanyForm.country.$invalid && !addCompanyForm.country.$pristine" class="help-block">
+                                                {{ 'VALIDATION_REQUIRED' | translate }}
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
@@ -90,8 +102,8 @@
                         </div>
                         <div class="panel-footer">
                             <button ng-click="closeAddCompanyFromForm()" class="btn btn-default">{{ 'CANCEL' | translate }}</button>
-                            <!--<button ng-disabled="addCompanyForm.$invalid" class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>-->
-                            <button class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>
+
+                            <button ng-disabled="addCompanyForm.$invalid" class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>
 
                             <span ng-show="addCompanyForm.$invalid" class="info-message">
                                 <i class="fa fa-info-circle"></i> {{ 'STATUS_MESSAGE_INFO_ALL_FIELDS' | translate }}
