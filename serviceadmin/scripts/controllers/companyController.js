@@ -12,7 +12,7 @@
         $scope.url = appConfig.url;
         $scope.companies = [];
         $scope.company = {};
-        $scope.company.logoImageLink = "";
+        //$scope.company.logoImageLink = "";
         $scope.spinnerStatus = constants.spinnerStatus;
         $scope.savingCompanyStatus = $scope.spinnerStatus.start;
 
@@ -80,10 +80,10 @@
 
         $scope.resetAddCompanyForm = function () {
             $scope.company = {};
-            $scope.company.logoImageLink = "";
-            $("#companyLogoImagePreview").attr("src", "");
+            //$scope.company.logoImageLink = "";
+            //$("#companyLogoImagePreview").attr("src", "");
             //addCompanyForm.$pristine = true;
-            addCompanyForm.$setPristine;
+            $scope.addCompanyForm.$setPristine;
             $scope.savingCompanyStatus = $scope.spinnerStatus.start;
         };
     }

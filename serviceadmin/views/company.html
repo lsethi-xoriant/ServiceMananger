@@ -128,12 +128,12 @@
     <div class="content" animate-panel effect="zoomIn">
         <div class="row">
             <div ng-repeat="company in companies">
-                <div class="col-lg-6">
+                <div class="col-md-6 col-lg-4">
                     <div class="hpanel hgreen contact-panel">
                         <div class="panel-body">
-                            <span class="label label-success pull-right">NEW</span>
+                            <!--<span class="label label-success pull-right">NEW</span>-->
                             <a href="{{ url.companies + company.id }}">
-                                <img alt="logo" class="m-b" ng-src="{{ company.logoImageLink }}">
+                                <img alt="logo" class="m-b" ng-src="{{ company.logoImageLink }}" style="max-width: 250px">
                             </a>
                             <h3>
                                 <a href="{{ url.companies + company.id }}">{{ company.name }}</a>
