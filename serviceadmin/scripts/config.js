@@ -20,7 +20,7 @@ appConfig.logoLink = appConfig.baseUrl + "folder/";
 appConfig.urlNoImage = appConfig.baseUrl + "content/images/realestates/NoImage_a.jpg";
 
 appConfig.url = {};
-appConfig.url.companies = "/#/companies/";
+appConfig.url.company = "/#/company/";
 appConfig.url.stores = "/stores/";
 
 //Validator Url

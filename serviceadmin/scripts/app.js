@@ -33,6 +33,10 @@ Managerno.config(function ($routeProvider, $httpProvider, $translateProvider) {
             templateUrl: "views/admin/error.html"
         })
         .when("/company", {
+            templateUrl: "views/companies.html",
+            controller: "companyController"
+        })
+        .when("/company/:id", {
             templateUrl: "views/company.html",
             controller: "companyController"
         })
