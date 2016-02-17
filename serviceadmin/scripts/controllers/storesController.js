@@ -65,7 +65,7 @@
             $scope.store={};
             $("#addStoreForm").slideUp();
             $("#topMenu").slideDown();
-            $("#my-image-to-object").attr('src','').removeAttr('style','width:300px;');
+            $("#my-image-to-object").attr('src','').removeAttr('style','width:300px;');//TODO Style should not be handled like this
             $('input[my-image-to-object]').val(null);
         }
 
