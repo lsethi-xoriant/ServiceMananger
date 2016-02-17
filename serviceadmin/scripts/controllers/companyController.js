@@ -12,12 +12,8 @@
         $scope.url = appConfig.url;
         $scope.companies = [];
         $scope.company = {};
-        //$scope.company.logoImageLink = "";
         $scope.spinnerStatus = constants.spinnerStatus;
         $scope.savingCompanyStatus = $scope.spinnerStatus.start;
-
-
-
 
         $scope.loadCompanies = function(){
             companyService.getCompanies().then(
@@ -29,7 +25,6 @@
                 });
         };
         $scope.loadCompanies();
-
 
         $scope.addCompanyFromForm = function () {
             $scope.resetAddCompanyForm();
@@ -80,9 +75,6 @@
 
         $scope.resetAddCompanyForm = function () {
             $scope.company = {};
-            //$scope.company.logoImageLink = "";
-            //$("#companyLogoImagePreview").attr("src", "");
-            //addCompanyForm.$pristine = true;
             $scope.addCompanyForm.$setPristine;
             $scope.savingCompanyStatus = $scope.spinnerStatus.start;
         };
