@@ -4,6 +4,9 @@ switch(document.location.hostname){
     case "serviceadmin.dev":
         appConfig.baseUrl = "http://serviceapi.dev/";
         break;
+    case "admin.managerno.do":
+        appConfig.baseUrl = "http://api.managerno.do/";
+        break;
     case "managerno.com":
         appConfig.baseUrl = "http://managerno.com/";
         break;
