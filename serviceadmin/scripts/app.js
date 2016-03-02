@@ -3,6 +3,7 @@
 var Managerno = angular.module("Managerno", [
     "ngRoute",
     "pascalprecht.translate",
+    "ngSanitize",
     "ui.bootstrap",
     "managernoControllers",
     "managernoServices",
@@ -65,6 +66,7 @@ Managerno.config(function ($routeProvider, $httpProvider, $translateProvider) {
         return savedProfile.language;
     });
 
+    $translateProvider.useSanitizeValueStrategy('escape');
 });
 
 Managerno.factory("httpInterceptor", ["$q", "$location", function ($q, $location) {
