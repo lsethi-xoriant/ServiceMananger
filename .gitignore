@@ -5,3 +5,4 @@
 /serviceadmin/.idea
 /serviceadmin/bower_components
 *.sln
+/.README.md
